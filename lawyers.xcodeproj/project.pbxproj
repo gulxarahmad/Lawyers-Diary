@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0963CB64245DC15B00DEE057 /* LawyerDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0963CB63245DC15B00DEE057 /* LawyerDiary.swift */; };
+		0963CB66245F3BAB00DEE057 /* LawyerCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0963CB65245F3BAB00DEE057 /* LawyerCases.swift */; };
+		0963CB6A245F451400DEE057 /* LawyerHearings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0963CB69245F451400DEE057 /* LawyerHearings.swift */; };
+		0963CB6C246024FD00DEE057 /* FindLawyerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0963CB6B246024FD00DEE057 /* FindLawyerModel.swift */; };
+		0963CB6E246036E700DEE057 /* LawyerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0963CB6D246036E700DEE057 /* LawyerData.swift */; };
+		0963CBBA246350FB00DEE057 /* ClientProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0963CBB9246350FB00DEE057 /* ClientProfile.swift */; };
+		0963CBBC2463749700DEE057 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0963CBBB2463749700DEE057 /* MainViewController.swift */; };
+		0963CBBE24657B0500DEE057 /* LawyerAddCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0963CBBD24657B0500DEE057 /* LawyerAddCase.swift */; };
+		0963CBC024658D3000DEE057 /* CaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0963CBBF24658D3000DEE057 /* CaseData.swift */; };
+		0963CBC224658E0000DEE057 /* CaseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0963CBC124658E0000DEE057 /* CaseDataModel.swift */; };
+		0970AA1E246970B8000E4057 /* Lawyer FAQs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0970AA1D246970B8000E4057 /* Lawyer FAQs.swift */; };
+		097BD88A23FF18CF0094AAC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097BD88923FF18CF0094AAC1 /* AppDelegate.swift */; };
+		097BD88C23FF18CF0094AAC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097BD88B23FF18CF0094AAC1 /* SceneDelegate.swift */; };
+		097BD89123FF18CF0094AAC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 097BD88F23FF18CF0094AAC1 /* Main.storyboard */; };
+		097BD89323FF18D60094AAC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 097BD89223FF18D60094AAC1 /* Assets.xcassets */; };
+		097BD89623FF18D60094AAC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 097BD89423FF18D60094AAC1 /* LaunchScreen.storyboard */; };
+		097BD8AC2401502B0094AAC1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 097BD8AB2401502B0094AAC1 /* GoogleService-Info.plist */; };
+		097BD8AE2407A5CD0094AAC1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097BD8AD2407A5CC0094AAC1 /* LoginViewController.swift */; };
+		097BD8B02407A5DD0094AAC1 /* signupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097BD8AF2407A5DD0094AAC1 /* signupViewController.swift */; };
+		097BD8B524085F570094AAC1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097BD8B424085F570094AAC1 /* Constants.swift */; };
+		097BD8B8240863320094AAC1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097BD8B7240863320094AAC1 /* Utilities.swift */; };
+		09BC944B245CC09A00ECA565 /* ClientLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC944A245CC09A00ECA565 /* ClientLogin.swift */; };
+		09BC944E245CC8D900ECA565 /* Client Sign Up.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC944D245CC8D900ECA565 /* Client Sign Up.swift */; };
+		09BC9450245D77DC00ECA565 /* Client Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC944F245D77DC00ECA565 /* Client Home.swift */; };
+		09BC9456245D7D4D00ECA565 /* Laws.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC9455245D7D4D00ECA565 /* Laws.swift */; };
+		09BC9460245D7DAD00ECA565 /* LawyerAddHearing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC945F245D7DAD00ECA565 /* LawyerAddHearing.swift */; };
+		09BC9464245D7DF800ECA565 /* LawyerHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC9463245D7DF800ECA565 /* LawyerHelp.swift */; };
+		09BC946A245D808200ECA565 /* LawyerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC9469245D808200ECA565 /* LawyerHome.swift */; };
+		09BC946E245D847500ECA565 /* LawyerMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC946D245D847500ECA565 /* LawyerMessages.swift */; };
+		09BC9472245D869300ECA565 /* LawyerProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC9471245D869300ECA565 /* LawyerProfile.swift */; };
+		09BC9474245D876000ECA565 /* LawyerNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC9473245D876000ECA565 /* LawyerNotifications.swift */; };
+		09BC9476245D8D2A00ECA565 /* FindLawyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC9475245D8D2A00ECA565 /* FindLawyer.swift */; };
+		09BC9478245D8D5300ECA565 /* ClientMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC9477245D8D5300ECA565 /* ClientMessages.swift */; };
+		09BC947A245D8D7500ECA565 /* ClientNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC9479245D8D7500ECA565 /* ClientNotifications.swift */; };
+		09F81EB52469CF5A00072B54 /* ClientHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F81EB42469CF5A00072B54 /* ClientHelp.swift */; };
+		09F81EB72469D20C00072B54 /* ClientFAQs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F81EB62469D20C00072B54 /* ClientFAQs.swift */; };
+		0BE917A282F2A750C15775B0 /* Pods_lawyers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C86BB4BA1A923D86165514 /* Pods_lawyers.framework */; };
+		185C0C492468064E0074F437 /* AddNewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C0C482468064E0074F437 /* AddNewController.swift */; };
+		185C0C4B2468582F0074F437 /* AddNewClientController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C0C4A2468582F0074F437 /* AddNewClientController.swift */; };
+		185C0C4D24686D3A0074F437 /* pdf.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 185C0C4C24686D3A0074F437 /* pdf.pdf */; };
+		9294D930246961BD000B9C3B /* pdf.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 9294D92F246961BD000B9C3B /* pdf.rtfd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0963CB63245DC15B00DEE057 /* LawyerDiary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LawyerDiary.swift; path = "lawyers/View controllers/LawyerDiary.swift"; sourceTree = SOURCE_ROOT; };
+		0963CB65245F3BAB00DEE057 /* LawyerCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LawyerCases.swift; path = "lawyers/View controllers/LawyerCases.swift"; sourceTree = SOURCE_ROOT; };
+		0963CB69245F451400DEE057 /* LawyerHearings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LawyerHearings.swift; path = "lawyers/View controllers/LawyerHearings.swift"; sourceTree = SOURCE_ROOT; };
+		0963CB6B246024FD00DEE057 /* FindLawyerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindLawyerModel.swift; sourceTree = "<group>"; };
+		0963CB6D246036E700DEE057 /* LawyerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LawyerData.swift; sourceTree = "<group>"; };
+		0963CBB9246350FB00DEE057 /* ClientProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientProfile.swift; sourceTree = "<group>"; };
+		0963CBBB2463749700DEE057 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0963CBBD24657B0500DEE057 /* LawyerAddCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LawyerAddCase.swift; path = "lawyers/View controllers/LawyerAddCase.swift"; sourceTree = SOURCE_ROOT; };
+		0963CBBF24658D3000DEE057 /* CaseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CaseData.swift; path = "lawyers/View controllers/CaseData.swift"; sourceTree = SOURCE_ROOT; };
+		0963CBC124658E0000DEE057 /* CaseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CaseDataModel.swift; path = "lawyers/View controllers/CaseDataModel.swift"; sourceTree = SOURCE_ROOT; };
+		0970AA1D246970B8000E4057 /* Lawyer FAQs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lawyer FAQs.swift"; sourceTree = "<group>"; };
+		097BD88623FF18CF0094AAC1 /* lawyers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lawyers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		097BD88923FF18CF0094AAC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		097BD88B23FF18CF0094AAC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		097BD89023FF18CF0094AAC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		097BD89223FF18D60094AAC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		097BD89523FF18D60094AAC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		097BD89723FF18D60094AAC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		097BD8AB2401502B0094AAC1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		097BD8AD2407A5CC0094AAC1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		097BD8AF2407A5DD0094AAC1 /* signupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupViewController.swift; sourceTree = "<group>"; };
+		097BD8B424085F570094AAC1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		097BD8B7240863320094AAC1 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		09BC944A245CC09A00ECA565 /* ClientLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientLogin.swift; sourceTree = "<group>"; };
+		09BC944D245CC8D900ECA565 /* Client Sign Up.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Client Sign Up.swift"; sourceTree = "<group>"; };
+		09BC944F245D77DC00ECA565 /* Client Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Client Home.swift"; sourceTree = "<group>"; };
+		09BC9455245D7D4D00ECA565 /* Laws.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Laws.swift; sourceTree = "<group>"; };
+		09BC945F245D7DAD00ECA565 /* LawyerAddHearing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LawyerAddHearing.swift; sourceTree = "<group>"; };
+		09BC9463245D7DF800ECA565 /* LawyerHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LawyerHelp.swift; sourceTree = "<group>"; };
+		09BC9469245D808200ECA565 /* LawyerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LawyerHome.swift; path = "lawyers/View controllers/LawyerHome.swift"; sourceTree = SOURCE_ROOT; };
+		09BC946D245D847500ECA565 /* LawyerMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LawyerMessages.swift; path = "lawyers/View controllers/LawyerMessages.swift"; sourceTree = SOURCE_ROOT; };
+		09BC9471245D869300ECA565 /* LawyerProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LawyerProfile.swift; path = "lawyers/View controllers/LawyerProfile.swift"; sourceTree = SOURCE_ROOT; };
+		09BC9473245D876000ECA565 /* LawyerNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LawyerNotifications.swift; path = "lawyers/View controllers/LawyerNotifications.swift"; sourceTree = SOURCE_ROOT; };
+		09BC9475245D8D2A00ECA565 /* FindLawyer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindLawyer.swift; sourceTree = "<group>"; };
+		09BC9477245D8D5300ECA565 /* ClientMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientMessages.swift; sourceTree = "<group>"; };
+		09BC9479245D8D7500ECA565 /* ClientNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientNotifications.swift; sourceTree = "<group>"; };
+		09F81EB42469CF5A00072B54 /* ClientHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHelp.swift; sourceTree = "<group>"; };
+		09F81EB62469D20C00072B54 /* ClientFAQs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientFAQs.swift; sourceTree = "<group>"; };
+		185C0C482468064E0074F437 /* AddNewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewController.swift; sourceTree = "<group>"; };
+		185C0C4A2468582F0074F437 /* AddNewClientController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewClientController.swift; sourceTree = "<group>"; };
+		185C0C4C24686D3A0074F437 /* pdf.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = pdf.pdf; path = ../../../../../Desktop/pdf.pdf; sourceTree = "<group>"; };
+		9294D92F246961BD000B9C3B /* pdf.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = pdf.rtfd; sourceTree = "<group>"; };
+		E6F78825309B7B3D3EC44135 /* Pods-lawyers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lawyers.debug.xcconfig"; path = "Target Support Files/Pods-lawyers/Pods-lawyers.debug.xcconfig"; sourceTree = "<group>"; };
+		ED36E0D75D7AFF936C05C279 /* Pods-lawyers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lawyers.release.xcconfig"; path = "Target Support Files/Pods-lawyers/Pods-lawyers.release.xcconfig"; sourceTree = "<group>"; };
+		F1C86BB4BA1A923D86165514 /* Pods_lawyers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lawyers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		097BD88323FF18CF0094AAC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BE917A282F2A750C15775B0 /* Pods_lawyers.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		097BD87D23FF18CF0094AAC1 = {
+			isa = PBXGroup;
+			children = (
+				9294D92F246961BD000B9C3B /* pdf.rtfd */,
+				097BD88823FF18CF0094AAC1 /* lawyers */,
+				097BD88723FF18CF0094AAC1 /* Products */,
+				5B63960665E28C04BA4B8CFA /* Pods */,
+				7793B73775FE2F3C898A43CA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		097BD88723FF18CF0094AAC1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				097BD88623FF18CF0094AAC1 /* lawyers.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		097BD88823FF18CF0094AAC1 /* lawyers */ = {
+			isa = PBXGroup;
+			children = (
+				097BD8B62408611D0094AAC1 /* Helper */,
+				097BD88923FF18CF0094AAC1 /* AppDelegate.swift */,
+				097BD88B23FF18CF0094AAC1 /* SceneDelegate.swift */,
+				097BD88F23FF18CF0094AAC1 /* Main.storyboard */,
+				097BD8B32407A6170094AAC1 /* View Controllers */,
+				09BC944C245CC0B100ECA565 /* Client View Controller */,
+				097BD89223FF18D60094AAC1 /* Assets.xcassets */,
+				097BD89423FF18D60094AAC1 /* LaunchScreen.storyboard */,
+				097BD8AB2401502B0094AAC1 /* GoogleService-Info.plist */,
+				097BD89723FF18D60094AAC1 /* Info.plist */,
+			);
+			path = lawyers;
+			sourceTree = "<group>";
+		};
+		097BD8B32407A6170094AAC1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				185C0C4C24686D3A0074F437 /* pdf.pdf */,
+				0963CBBB2463749700DEE057 /* MainViewController.swift */,
+				097BD8AD2407A5CC0094AAC1 /* LoginViewController.swift */,
+				097BD8AF2407A5DD0094AAC1 /* signupViewController.swift */,
+				09BC9455245D7D4D00ECA565 /* Laws.swift */,
+				09BC9463245D7DF800ECA565 /* LawyerHelp.swift */,
+				09BC945F245D7DAD00ECA565 /* LawyerAddHearing.swift */,
+				09BC9469245D808200ECA565 /* LawyerHome.swift */,
+				09BC946D245D847500ECA565 /* LawyerMessages.swift */,
+				09BC9471245D869300ECA565 /* LawyerProfile.swift */,
+				09BC9473245D876000ECA565 /* LawyerNotifications.swift */,
+				0963CB63245DC15B00DEE057 /* LawyerDiary.swift */,
+				0963CB65245F3BAB00DEE057 /* LawyerCases.swift */,
+				0963CB69245F451400DEE057 /* LawyerHearings.swift */,
+				0963CBBD24657B0500DEE057 /* LawyerAddCase.swift */,
+				0963CBBF24658D3000DEE057 /* CaseData.swift */,
+				0963CBC124658E0000DEE057 /* CaseDataModel.swift */,
+				185C0C482468064E0074F437 /* AddNewController.swift */,
+				0970AA1D246970B8000E4057 /* Lawyer FAQs.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		097BD8B62408611D0094AAC1 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				097BD8B424085F570094AAC1 /* Constants.swift */,
+				097BD8B7240863320094AAC1 /* Utilities.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		09BC944C245CC0B100ECA565 /* Client View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				09BC944A245CC09A00ECA565 /* ClientLogin.swift */,
+				09BC944D245CC8D900ECA565 /* Client Sign Up.swift */,
+				09BC944F245D77DC00ECA565 /* Client Home.swift */,
+				09BC9477245D8D5300ECA565 /* ClientMessages.swift */,
+				09BC9479245D8D7500ECA565 /* ClientNotifications.swift */,
+				09BC9475245D8D2A00ECA565 /* FindLawyer.swift */,
+				0963CB6B246024FD00DEE057 /* FindLawyerModel.swift */,
+				0963CB6D246036E700DEE057 /* LawyerData.swift */,
+				0963CBB9246350FB00DEE057 /* ClientProfile.swift */,
+				185C0C4A2468582F0074F437 /* AddNewClientController.swift */,
+				09F81EB42469CF5A00072B54 /* ClientHelp.swift */,
+				09F81EB62469D20C00072B54 /* ClientFAQs.swift */,
+			);
+			path = "Client View Controller";
+			sourceTree = "<group>";
+		};
+		5B63960665E28C04BA4B8CFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6F78825309B7B3D3EC44135 /* Pods-lawyers.debug.xcconfig */,
+				ED36E0D75D7AFF936C05C279 /* Pods-lawyers.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7793B73775FE2F3C898A43CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1C86BB4BA1A923D86165514 /* Pods_lawyers.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		097BD88523FF18CF0094AAC1 /* lawyers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 097BD89A23FF18D60094AAC1 /* Build configuration list for PBXNativeTarget "lawyers" */;
+			buildPhases = (
+				E2C4D0B42CE3EFE696DC6CD3 /* [CP] Check Pods Manifest.lock */,
+				097BD88223FF18CF0094AAC1 /* Sources */,
+				097BD88323FF18CF0094AAC1 /* Frameworks */,
+				097BD88423FF18CF0094AAC1 /* Resources */,
+				305B74003F5208F6F660D678 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lawyers;
+			productName = lawyers;
+			productReference = 097BD88623FF18CF0094AAC1 /* lawyers.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		097BD87E23FF18CF0094AAC1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = hst;
+				TargetAttributes = {
+					097BD88523FF18CF0094AAC1 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 097BD88123FF18CF0094AAC1 /* Build configuration list for PBXProject "lawyers" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 097BD87D23FF18CF0094AAC1;
+			productRefGroup = 097BD88723FF18CF0094AAC1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				097BD88523FF18CF0094AAC1 /* lawyers */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		097BD88423FF18CF0094AAC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				097BD89623FF18D60094AAC1 /* LaunchScreen.storyboard in Resources */,
+				097BD8AC2401502B0094AAC1 /* GoogleService-Info.plist in Resources */,
+				185C0C4D24686D3A0074F437 /* pdf.pdf in Resources */,
+				097BD89323FF18D60094AAC1 /* Assets.xcassets in Resources */,
+				9294D930246961BD000B9C3B /* pdf.rtfd in Resources */,
+				097BD89123FF18CF0094AAC1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		305B74003F5208F6F660D678 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-lawyers/Pods-lawyers-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-lawyers/Pods-lawyers-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-lawyers/Pods-lawyers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2C4D0B42CE3EFE696DC6CD3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-lawyers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		097BD88223FF18CF0094AAC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				097BD8AE2407A5CD0094AAC1 /* LoginViewController.swift in Sources */,
+				09BC9464245D7DF800ECA565 /* LawyerHelp.swift in Sources */,
+				097BD8B02407A5DD0094AAC1 /* signupViewController.swift in Sources */,
+				09BC946A245D808200ECA565 /* LawyerHome.swift in Sources */,
+				09BC9472245D869300ECA565 /* LawyerProfile.swift in Sources */,
+				0963CB66245F3BAB00DEE057 /* LawyerCases.swift in Sources */,
+				0963CB6C246024FD00DEE057 /* FindLawyerModel.swift in Sources */,
+				09F81EB52469CF5A00072B54 /* ClientHelp.swift in Sources */,
+				0963CBC024658D3000DEE057 /* CaseData.swift in Sources */,
+				09F81EB72469D20C00072B54 /* ClientFAQs.swift in Sources */,
+				0963CBBE24657B0500DEE057 /* LawyerAddCase.swift in Sources */,
+				0963CBBC2463749700DEE057 /* MainViewController.swift in Sources */,
+				0963CBC224658E0000DEE057 /* CaseDataModel.swift in Sources */,
+				0970AA1E246970B8000E4057 /* Lawyer FAQs.swift in Sources */,
+				0963CB64245DC15B00DEE057 /* LawyerDiary.swift in Sources */,
+				185C0C4B2468582F0074F437 /* AddNewClientController.swift in Sources */,
+				09BC9450245D77DC00ECA565 /* Client Home.swift in Sources */,
+				097BD8B524085F570094AAC1 /* Constants.swift in Sources */,
+				09BC9474245D876000ECA565 /* LawyerNotifications.swift in Sources */,
+				09BC947A245D8D7500ECA565 /* ClientNotifications.swift in Sources */,
+				0963CBBA246350FB00DEE057 /* ClientProfile.swift in Sources */,
+				09BC9456245D7D4D00ECA565 /* Laws.swift in Sources */,
+				09BC946E245D847500ECA565 /* LawyerMessages.swift in Sources */,
+				0963CB6A245F451400DEE057 /* LawyerHearings.swift in Sources */,
+				09BC944E245CC8D900ECA565 /* Client Sign Up.swift in Sources */,
+				097BD88A23FF18CF0094AAC1 /* AppDelegate.swift in Sources */,
+				09BC9478245D8D5300ECA565 /* ClientMessages.swift in Sources */,
+				09BC944B245CC09A00ECA565 /* ClientLogin.swift in Sources */,
+				185C0C492468064E0074F437 /* AddNewController.swift in Sources */,
+				09BC9476245D8D2A00ECA565 /* FindLawyer.swift in Sources */,
+				09BC9460245D7DAD00ECA565 /* LawyerAddHearing.swift in Sources */,
+				097BD8B8240863320094AAC1 /* Utilities.swift in Sources */,
+				0963CB6E246036E700DEE057 /* LawyerData.swift in Sources */,
+				097BD88C23FF18CF0094AAC1 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		097BD88F23FF18CF0094AAC1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				097BD89023FF18CF0094AAC1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		097BD89423FF18D60094AAC1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				097BD89523FF18D60094AAC1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		097BD89823FF18D60094AAC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		097BD89923FF18D60094AAC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		097BD89B23FF18D60094AAC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6F78825309B7B3D3EC44135 /* Pods-lawyers.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = lawyers/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gulzar.lawyers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		097BD89C23FF18D60094AAC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED36E0D75D7AFF936C05C279 /* Pods-lawyers.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = lawyers/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gulzar.lawyers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		097BD88123FF18CF0094AAC1 /* Build configuration list for PBXProject "lawyers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				097BD89823FF18D60094AAC1 /* Debug */,
+				097BD89923FF18D60094AAC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		097BD89A23FF18D60094AAC1 /* Build configuration list for PBXNativeTarget "lawyers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				097BD89B23FF18D60094AAC1 /* Debug */,
+				097BD89C23FF18D60094AAC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 097BD87E23FF18CF0094AAC1 /* Project object */;
+}
