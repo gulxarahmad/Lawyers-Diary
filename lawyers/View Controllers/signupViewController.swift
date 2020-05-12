@@ -40,7 +40,7 @@ class signupViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var signup: UIButton!
     
     
-    @IBOutlet weak var errorlabel: UILabel!
+   // @IBOutlet weak var errorlabel: UILabel!
     
     @IBOutlet weak var genderbtn: UIButton!
     
@@ -150,8 +150,13 @@ class signupViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     func showerror(_ errmessage:String)
     {
-        errorlabel.text=errmessage
-        errorlabel.alpha=1
+        let alertController = UIAlertController(title: "Message", message: errmessage , preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "Close Alert", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        present(alertController, animated: true, completion: nil)
+        //errorlabel.text=errmessage
+       // errorlabel.alpha=1
     }
 
 

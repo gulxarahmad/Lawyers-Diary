@@ -33,7 +33,7 @@ class Client_Sign_Up: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var cpassword: UITextField! = nil
    
-    @IBOutlet weak var errorlabel: UILabel!
+   // @IBOutlet weak var errorlabel: UILabel!
     
     @IBOutlet weak var gendertbl: UITableView!
     
@@ -123,8 +123,13 @@ class Client_Sign_Up: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     func showerror(_ errmessage:String)
     {
-        errorlabel.text=errmessage
-        errorlabel.alpha=1
+        let alertController = UIAlertController(title: "Message", message: errmessage , preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "Close Alert", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        present(alertController, animated: true, completion: nil)
+        //errorlabel.text=errmessage
+       // errorlabel.alpha=1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var num = 1

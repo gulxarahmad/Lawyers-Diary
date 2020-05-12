@@ -27,7 +27,7 @@ class LawyerAddCase: UIViewController, UITableViewDelegate, UITableViewDataSourc
     var email: String!
 
     @IBOutlet weak var caseTypetbl: UITableView!
-    @IBOutlet weak var errorlabel: UILabel!
+    //@IBOutlet weak var errorlabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         caseTypetbl.isHidden = true
