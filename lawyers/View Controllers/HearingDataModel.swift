@@ -10,11 +10,9 @@ import Foundation
 import UIKit
 class HearingDataModel{
     var cname: String?
-    var hearingtime: String?
     var hearingdate: String?
-    init (cname: String, hearingtime: String, hearingdate: String){
+    init (cname: String, hearingdate: String){
         self.cname = cname
-        self.hearingtime = hearingtime
         self.hearingdate = hearingdate
     }
 }

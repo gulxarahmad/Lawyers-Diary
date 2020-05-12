@@ -68,8 +68,8 @@ class LawyerAddHearing: UIViewController {
             databaseRef.child("Hearings").childByAutoId().setValue(ldata)
              
                 
-            //let lcase = self.storyboard?.instantiateViewController(withIdentifier: "LCases") as! LawyerCases
-         //   self.navigationController?.pushViewController(lcase, animated: true)
+            let lhearing = self.storyboard?.instantiateViewController(withIdentifier: "LHearings") as! LawyerHearings
+            self.navigationController?.pushViewController(lhearing, animated: true)
             self.showmessage("The Hearing has added succesfully!")
                
             })
