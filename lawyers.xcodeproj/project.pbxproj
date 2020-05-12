@@ -46,8 +46,6 @@
 		0BE917A282F2A750C15775B0 /* Pods_lawyers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C86BB4BA1A923D86165514 /* Pods_lawyers.framework */; };
 		185C0C492468064E0074F437 /* AddNewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C0C482468064E0074F437 /* AddNewController.swift */; };
 		185C0C4B2468582F0074F437 /* AddNewClientController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C0C4A2468582F0074F437 /* AddNewClientController.swift */; };
-		185C0C4D24686D3A0074F437 /* pdf.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 185C0C4C24686D3A0074F437 /* pdf.pdf */; };
-		9294D930246961BD000B9C3B /* pdf.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = 9294D92F246961BD000B9C3B /* pdf.rtfd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,8 +89,6 @@
 		09F81EB62469D20C00072B54 /* ClientFAQs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientFAQs.swift; sourceTree = "<group>"; };
 		185C0C482468064E0074F437 /* AddNewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewController.swift; sourceTree = "<group>"; };
 		185C0C4A2468582F0074F437 /* AddNewClientController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewClientController.swift; sourceTree = "<group>"; };
-		185C0C4C24686D3A0074F437 /* pdf.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = pdf.pdf; path = ../../../../../Desktop/pdf.pdf; sourceTree = "<group>"; };
-		9294D92F246961BD000B9C3B /* pdf.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = pdf.rtfd; sourceTree = "<group>"; };
 		E6F78825309B7B3D3EC44135 /* Pods-lawyers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lawyers.debug.xcconfig"; path = "Target Support Files/Pods-lawyers/Pods-lawyers.debug.xcconfig"; sourceTree = "<group>"; };
 		ED36E0D75D7AFF936C05C279 /* Pods-lawyers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lawyers.release.xcconfig"; path = "Target Support Files/Pods-lawyers/Pods-lawyers.release.xcconfig"; sourceTree = "<group>"; };
 		F1C86BB4BA1A923D86165514 /* Pods_lawyers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lawyers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,7 +109,6 @@
 		097BD87D23FF18CF0094AAC1 = {
 			isa = PBXGroup;
 			children = (
-				9294D92F246961BD000B9C3B /* pdf.rtfd */,
 				097BD88823FF18CF0094AAC1 /* lawyers */,
 				097BD88723FF18CF0094AAC1 /* Products */,
 				5B63960665E28C04BA4B8CFA /* Pods */,
@@ -149,7 +144,6 @@
 		097BD8B32407A6170094AAC1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				185C0C4C24686D3A0074F437 /* pdf.pdf */,
 				0963CBBB2463749700DEE057 /* MainViewController.swift */,
 				097BD8AD2407A5CC0094AAC1 /* LoginViewController.swift */,
 				097BD8AF2407A5DD0094AAC1 /* signupViewController.swift */,
@@ -279,9 +273,7 @@
 			files = (
 				097BD89623FF18D60094AAC1 /* LaunchScreen.storyboard in Resources */,
 				097BD8AC2401502B0094AAC1 /* GoogleService-Info.plist in Resources */,
-				185C0C4D24686D3A0074F437 /* pdf.pdf in Resources */,
 				097BD89323FF18D60094AAC1 /* Assets.xcassets in Resources */,
-				9294D930246961BD000B9C3B /* pdf.rtfd in Resources */,
 				097BD89123FF18CF0094AAC1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
