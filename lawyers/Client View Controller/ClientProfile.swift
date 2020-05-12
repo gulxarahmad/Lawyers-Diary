@@ -13,6 +13,7 @@ class ClientProfile: UIViewController {
 
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var email: UILabel!
+
     @IBOutlet weak var city: UILabel!
     
     @IBOutlet weak var gender: UILabel!
@@ -36,9 +37,13 @@ class ClientProfile: UIViewController {
            let value = snapshot.value as? NSDictionary
             self.fname = value?["firstname"] as? String ?? ""
             self.em = value?["email"] as? String ?? ""
+            self.cit = value?["City"] as? String ?? ""
+            self.gend = value?["Gender"] as? String ?? ""
             
             self.name.text = self.fname
             self.email.text = self.em
+            self.city.text = self.cit
+            self.gender.text = self.gend
           
 
            }) { (error) in

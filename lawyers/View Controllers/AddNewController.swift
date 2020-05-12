@@ -57,7 +57,7 @@ class AddNewController: UIViewController,UITextFieldDelegate {
             let formatter = DateFormatter()
             formatter.dateFormat = "MMM, dd, YYYY at hh:mm"
             let rdatetime = formatter.string(from: targetDate)
-          /* let ref: DatabaseReference!
+           let ref: DatabaseReference!
             ref = Database.database().reference()
             let userID = Auth.auth().currentUser?.uid
             ref.child("Lawyer").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
@@ -67,10 +67,11 @@ class AddNewController: UIViewController,UITextFieldDelegate {
             let ldata = ["Reminder Title": titleText, "Reminder Details":bodyText, "Reminder Time and Date": rdatetime, "Email": email] as [String: Any]
             let databaseRef = Database.database().reference()
                 databaseRef.child("LawyersReminder").childByAutoId().setValue(ldata)
-                self.showmessage("Reminder Added Successfully")*/
+            self.completion?(titleText,bodyText,targetDate)
+            self.showmessage("Reminder Added Successfully")
               
-                self.completion?(titleText,bodyText,targetDate)
-        //  })
+
+          })
       }
     }
       
