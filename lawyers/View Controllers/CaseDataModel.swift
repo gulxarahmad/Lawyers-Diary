@@ -13,10 +13,12 @@ class CaseDataModel{
     var courtname: String?
     var casetype: String?
     var mobile: String?
-    init (cname: String, courtname: String, casetype: String, mobile: String){
+    var details:String?
+    init (cname: String, courtname: String, casetype: String, mobile: String, det: String){
         self.cname = cname
         self.courtname = courtname
         self.casetype = casetype
         self.mobile = mobile
+        self.details = det
     }
 }

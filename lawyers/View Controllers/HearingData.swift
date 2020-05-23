@@ -18,7 +18,10 @@ class HearingData: UITableViewCell {
     var datashow: HearingDataModel?{
            didSet{
                cname.text = datashow?.cname
+<<<<<<< HEAD
 
+=======
+>>>>>>> dev-Gulzar
                hdate.text = datashow?.hearingdate
 
            }

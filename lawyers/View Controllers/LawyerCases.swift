@@ -56,8 +56,9 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                 let mobile = maindata["Mobile Number"] as? String
                 let casetype = maindata["Case type"] as? String
                 let lawyeremail = maindata ["Email"] as? String
+                let det = maindata["Details"] as? String
                 if self.email == lawyeremail{
-                self.casesearchdata.append(CaseDataModel(cname: cname!, courtname: courtname!, casetype: casetype!, mobile: mobile!))
+                    self.casesearchdata.append(CaseDataModel(cname: cname!, courtname: courtname!, casetype: casetype!, mobile: mobile!, det:det!))
                    }
                   self.CaseDataTable.reloadData()
                 }
@@ -93,11 +94,12 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                     let mobile = maindata["Mobile Number"] as? String
                     let casetype = maindata["Case type"] as? String
                     let lawyeremail = maindata ["Email"] as? String
+                    let det = maindata["Details"] as? String
                     let dateadd = maindata["Date of Add"] as? String
                         
                         
                     if self.email == lawyeremail && datestring == dateadd{
-                    self.casesearchdata.append(CaseDataModel(cname: cname!, courtname: courtname!, casetype: casetype!, mobile: mobile!))
+                    self.casesearchdata.append(CaseDataModel(cname: cname!, courtname: courtname!, casetype: casetype!, mobile: mobile!, det: det!))
 
                        }
                      self.CaseDataTable.reloadData()
@@ -143,6 +145,7 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                     let mobile = maindata["Mobile Number"] as? String
                     let casetype = maindata["Case type"] as? String
                     let lawyeremail = maindata ["Email"] as? String
+                    let det = maindata["Details"] as? String
                     let dateadd = maindata["Date of Add"] as? String
                     let formatter = DateFormatter()
                     formatter.dateFormat = "M/d/yyyy"
@@ -160,7 +163,7 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                   //  print(fetchdatetoint)
                         if self.email == lawyeremail{
                             if (fetchrecorddate?.compare(monthofdate!) == .orderedSame && ( fetchrecordday?.compare(currentday!) == .orderedAscending || fetchrecordday?.compare(currentday!) == .orderedSame)) || (fetchrecorddate?.compare(stringtodate!) == .orderedSame && fetchrecordday?.compare(currentday!) == .orderedDescending) {
-                    self.casesearchdata.append(CaseDataModel(cname: cname!, courtname: courtname!, casetype: casetype!, mobile: mobile!))
+                    self.casesearchdata.append(CaseDataModel(cname: cname!, courtname: courtname!, casetype: casetype!, mobile: mobile!, det: det!))
                 
                             }
 
@@ -183,6 +186,16 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
         let cell = tableView.dequeueReusableCell(withIdentifier: "CaseData", for: indexPath) as! CaseData
         cell.datashow = casesearchdata[indexPath.row]
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detail:ShowCaseData = self.storyboard?.instantiateViewController(withIdentifier: "CaseDetails") as! ShowCaseData
+        self.navigationController?.pushViewController(detail, animated:true)
+        detail.client = casesearchdata[indexPath.row].cname!
+        detail.det = casesearchdata[indexPath.row].details!
+        detail.court = casesearchdata[indexPath.row].courtname!
+        detail.type = casesearchdata[indexPath.row].casetype!
+        detail.contact = casesearchdata[indexPath.row].mobile!
+        
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
