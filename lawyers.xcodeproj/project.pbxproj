@@ -10,6 +10,7 @@
 		095031A7246AD0440065BF26 /* LawyerHearings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095031A6246AD0440065BF26 /* LawyerHearings.swift */; };
 		095031AB246AD2D50065BF26 /* HearingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095031AA246AD2D50065BF26 /* HearingData.swift */; };
 		095031AD246AD3A60065BF26 /* HearingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095031AC246AD3A60065BF26 /* HearingDataModel.swift */; };
+		095031AF2478FF970065BF26 /* ShowCaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095031AE2478FF970065BF26 /* ShowCaseData.swift */; };
 		0963CB64245DC15B00DEE057 /* LawyerDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0963CB63245DC15B00DEE057 /* LawyerDiary.swift */; };
 		0963CB66245F3BAB00DEE057 /* LawyerCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0963CB65245F3BAB00DEE057 /* LawyerCases.swift */; };
 		0963CB6C246024FD00DEE057 /* FindLawyerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0963CB6B246024FD00DEE057 /* FindLawyerModel.swift */; };
@@ -54,6 +55,7 @@
 		095031A6246AD0440065BF26 /* LawyerHearings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LawyerHearings.swift; sourceTree = "<group>"; };
 		095031AA246AD2D50065BF26 /* HearingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearingData.swift; sourceTree = "<group>"; };
 		095031AC246AD3A60065BF26 /* HearingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearingDataModel.swift; sourceTree = "<group>"; };
+		095031AE2478FF970065BF26 /* ShowCaseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCaseData.swift; sourceTree = "<group>"; };
 		0963CB63245DC15B00DEE057 /* LawyerDiary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LawyerDiary.swift; path = "lawyers/View controllers/LawyerDiary.swift"; sourceTree = SOURCE_ROOT; };
 		0963CB65245F3BAB00DEE057 /* LawyerCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LawyerCases.swift; path = "lawyers/View controllers/LawyerCases.swift"; sourceTree = SOURCE_ROOT; };
 		0963CB6B246024FD00DEE057 /* FindLawyerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindLawyerModel.swift; sourceTree = "<group>"; };
@@ -153,7 +155,6 @@
 				097BD8AF2407A5DD0094AAC1 /* signupViewController.swift */,
 				09BC9455245D7D4D00ECA565 /* Laws.swift */,
 				09BC9463245D7DF800ECA565 /* LawyerHelp.swift */,
-				09BC945F245D7DAD00ECA565 /* LawyerAddHearing.swift */,
 				09BC9469245D808200ECA565 /* LawyerHome.swift */,
 				09BC946D245D847500ECA565 /* LawyerMessages.swift */,
 				09BC9471245D869300ECA565 /* LawyerProfile.swift */,
@@ -165,9 +166,11 @@
 				0963CBC124658E0000DEE057 /* CaseDataModel.swift */,
 				185C0C482468064E0074F437 /* AddNewController.swift */,
 				0970AA1D246970B8000E4057 /* Lawyer FAQs.swift */,
+				09BC945F245D7DAD00ECA565 /* LawyerAddHearing.swift */,
 				095031A6246AD0440065BF26 /* LawyerHearings.swift */,
 				095031AA246AD2D50065BF26 /* HearingData.swift */,
 				095031AC246AD3A60065BF26 /* HearingDataModel.swift */,
+				095031AE2478FF970065BF26 /* ShowCaseData.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				09BC946E245D847500ECA565 /* LawyerMessages.swift in Sources */,
 				09BC944E245CC8D900ECA565 /* Client Sign Up.swift in Sources */,
 				097BD88A23FF18CF0094AAC1 /* AppDelegate.swift in Sources */,
+				095031AF2478FF970065BF26 /* ShowCaseData.swift in Sources */,
 				095031AB246AD2D50065BF26 /* HearingData.swift in Sources */,
 				09BC9478245D8D5300ECA565 /* ClientMessages.swift in Sources */,
 				09BC944B245CC09A00ECA565 /* ClientLogin.swift in Sources */,

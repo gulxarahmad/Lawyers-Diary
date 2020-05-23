@@ -16,8 +16,10 @@ class LawyerAddHearing: UIViewController {
     @IBOutlet weak var agenda: UITextField!
     
     @IBOutlet weak var date: UIDatePicker!
+    var setcname:String!
     override func viewDidLoad() {
         super.viewDidLoad()
+        cname.text = setcname
 
         // Do any additional setup after loading the view.
     }

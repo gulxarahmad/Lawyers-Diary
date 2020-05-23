@@ -54,7 +54,7 @@ class LawyerHearings: UIViewController, UITableViewDataSource, UITableViewDelega
                       print(heartime)
 
                     if self.email == lawyeremail{
-                        self.hearingsearchdata.append(HearingDataModel(cname: cname!, hearingtime: heartime, hearingdate: heardate))
+                        self.hearingsearchdata.append(HearingDataModel(cname: cname!,  hearingdate: hearingdate!))
                        }
                       self.HearingDataTable.reloadData()
                     }
