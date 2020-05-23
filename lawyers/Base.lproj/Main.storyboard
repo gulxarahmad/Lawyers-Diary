@@ -2252,7 +2252,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="151"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hearing Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYw-BK-SOm">
+                                                    <rect key="frame" x="16" y="82.5" width="100.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -2263,27 +2264,32 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fO4-xc-ta6">
+                                                    <rect key="frame" x="166" y="25.5" width="42" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02a-CG-j82">
+                                                    <rect key="frame" x="166" y="82.5" width="42" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-
+                                                <constraint firstItem="fO4-xc-ta6" firstAttribute="top" secondItem="tgh-tG-NI3" secondAttribute="topMargin" constant="14.5" id="1ix-4q-1Ui"/>
                                                 <constraint firstItem="fO4-xc-ta6" firstAttribute="centerX" secondItem="tgh-tG-NI3" secondAttribute="centerX" id="6kx-8I-Rt0"/>
                                                 <constraint firstItem="MCf-MU-r97" firstAttribute="baseline" secondItem="fO4-xc-ta6" secondAttribute="baseline" id="Bvf-fz-Rfp"/>
                                                 <constraint firstItem="02a-CG-j82" firstAttribute="baseline" secondItem="DYw-BK-SOm" secondAttribute="firstBaseline" id="IZt-9V-AZ6"/>
                                                 <constraint firstItem="MCf-MU-r97" firstAttribute="centerY" secondItem="fO4-xc-ta6" secondAttribute="centerY" id="JMW-d1-1OO"/>
-
+                                                <constraint firstItem="MCf-MU-r97" firstAttribute="leading" secondItem="DYw-BK-SOm" secondAttribute="leading" id="edN-2K-b24"/>
+                                                <constraint firstItem="MCf-MU-r97" firstAttribute="leading" secondItem="tgh-tG-NI3" secondAttribute="leadingMargin" constant="-4" id="jKt-oJ-2zr"/>
+                                                <constraint firstItem="DYw-BK-SOm" firstAttribute="baseline" secondItem="02a-CG-j82" secondAttribute="baseline" id="jcD-UJ-xxw"/>
                                                 <constraint firstItem="DYw-BK-SOm" firstAttribute="centerY" secondItem="02a-CG-j82" secondAttribute="centerY" id="o1K-iI-DYr"/>
                                                 <constraint firstItem="02a-CG-j82" firstAttribute="top" secondItem="MCf-MU-r97" secondAttribute="bottom" constant="36.5" id="pzf-Xm-j6x"/>
                                                 <constraint firstItem="fO4-xc-ta6" firstAttribute="baseline" secondItem="MCf-MU-r97" secondAttribute="firstBaseline" id="sqO-RV-cUs"/>
+                                                <constraint firstItem="fO4-xc-ta6" firstAttribute="leading" secondItem="02a-CG-j82" secondAttribute="leading" id="vnl-Hd-KLo"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -3116,3 +3122,4 @@
         <image name="logo 1" width="300" height="300"/>
     </resources>
 </document>
+
