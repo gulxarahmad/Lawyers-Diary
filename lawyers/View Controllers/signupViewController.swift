@@ -34,8 +34,9 @@ class signupViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var password: UITextField! = nil
     
     @IBOutlet weak var cpassword: UITextField! = nil
+    @IBOutlet weak var mobile: UITextField! = nil
     
-  //  @IBOutlet weak var mobile: UITextField! = nil
+ 
     
     @IBOutlet weak var signup: UIButton!
     
@@ -80,6 +81,7 @@ class signupViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func validatefields() -> String? {
         
         if firstname.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || lastname.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || email.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || password.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || cpassword.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            mobile.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             gend == "" || cit == "" || expert == "" || spec == ""
            
         {
@@ -99,6 +101,12 @@ class signupViewController: UIViewController, UITableViewDelegate, UITableViewDa
         {
             return "Email Format is Invalid"
         }
+        let vnum=mobile.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if Utilities.isValidPhone(vnum) == false
+        {
+            return "Phone Number Format is Invalid"
+        }
+        
         return nil
     }
 
@@ -112,6 +120,7 @@ class signupViewController: UIViewController, UITableViewDelegate, UITableViewDa
         {
             let em = email.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let psw = password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let num = mobile.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let fname = firstname.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let lname = lastname.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
@@ -126,7 +135,7 @@ class signupViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
             
             Auth.auth().createUser(withEmail: em, password: psw) { (result, err) in
-                let ldata = ["ID": result!.user.uid  , "email" : em, "firstname" : fname,"lastname" : lname,"password" : psw, "Gender": genders!, "City": cities!, "Specialization":specs, "Experience":experts, "User Type": "Lawyer"] as [String: Any]
+                let ldata = ["ID": result!.user.uid  , "email" : em, "Phone Number": num, "firstname" : fname,"lastname" : lname, "Gender": genders!, "City": cities!, "Specialization":specs, "Experience":experts, "User Type": "Lawyer"] as [String: Any]
                 
             // Check for errors
             if err != nil {

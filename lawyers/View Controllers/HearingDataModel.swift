@@ -9,13 +9,24 @@
 import Foundation
 import UIKit
 class HearingDataModel{
+    var skey:String?
+    var hearingid: String?
     var cname: String?
+<<<<<<< HEAD
     var hearingdate: String?
 
     init (cname: String,  hearingdate: String){
 
+=======
+    var hearingtime: String?
+    var hearingagenda: String?
+    init (skey: String, hearingid: String, cname: String,  hearingtime: String, hearingagenda: String){
+        self.skey = skey
+        self.hearingid = hearingid
+>>>>>>> dev-Gulzar
         self.cname = cname
-        self.hearingdate = hearingdate
+        self.hearingtime = hearingtime
+        self.hearingagenda = hearingagenda
     }
 }
 

@@ -79,7 +79,9 @@ class LawyerAddCase: UIViewController, UITableViewDelegate, UITableViewDataSourc
                                             // Get user value
                     let value = snapshot.value as? NSDictionary
                     self.email = value?["email"] as? String ?? ""
-                        let ldata = ["Client Name": name, "Details":cdetails, "Court Name": courtname, "Mobile Number":mobile, "Case type":type, "Email": self.email, "Date of Add":datestring] as [String: Any]
+                    let cid = UUID().uuidString
+                    print (cid)
+                    let ldata = ["Client ID":cid,"Client Name": name, "Details":cdetails, "Court Name": courtname, "Mobile Number":mobile, "Case type":type, "Email": self.email, "Date of Add":datestring] as [String: Any]
                     let databaseRef = Database.database().reference()
                     databaseRef.child("LawyerCases").childByAutoId().setValue(ldata)
                      

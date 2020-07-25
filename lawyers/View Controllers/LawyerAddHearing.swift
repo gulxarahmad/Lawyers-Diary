@@ -17,6 +17,7 @@ class LawyerAddHearing: UIViewController {
     
     @IBOutlet weak var date: UIDatePicker!
     var setcname:String!
+    var clientID: String!
     override func viewDidLoad() {
         super.viewDidLoad()
         cname.text = setcname
@@ -65,7 +66,8 @@ class LawyerAddHearing: UIViewController {
                                     // Get user value
             let value = snapshot.value as? NSDictionary
             let email = value?["email"] as? String ?? ""
-            let ldata = ["Client Name": name, "Agenda":agend, "Hearing Date": hearingdate, "Email": email] as [String: Any]
+                let hid = UUID().uuidString
+                let ldata = ["Hearing ID":hid,"Client ID": self.clientID,"Client Name": name, "Agenda":agend, "Hearing Date": hearingdate, "Email": email] as [String: Any]
             let databaseRef = Database.database().reference()
             databaseRef.child("Hearings").childByAutoId().setValue(ldata)
              

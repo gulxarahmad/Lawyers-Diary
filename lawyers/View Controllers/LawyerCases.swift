@@ -52,13 +52,14 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                 if let maindata = snap.value as? [String: AnyObject]{
                                     
                 let cname = maindata["Client Name"] as? String
+                let clientid = maindata["Client ID"] as? String
                 let courtname = maindata["Court Name"] as? String
                 let mobile = maindata["Mobile Number"] as? String
                 let casetype = maindata["Case type"] as? String
                 let lawyeremail = maindata ["Email"] as? String
                 let det = maindata["Details"] as? String
                 if self.email == lawyeremail{
-                    self.casesearchdata.append(CaseDataModel(cname: cname!, courtname: courtname!, casetype: casetype!, mobile: mobile!, det:det!))
+                    self.casesearchdata.append(CaseDataModel(cid: clientid!, cname: cname!, courtname: courtname!, casetype: casetype!, mobile: mobile!, det:det!))
                    }
                   self.CaseDataTable.reloadData()
                 }
@@ -90,6 +91,7 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                     if let maindata = snap.value as? [String: AnyObject]{
                                         
                     let cname = maindata["Client Name"] as? String
+                    let clientid = maindata["Client ID"] as? String
                     let courtname = maindata["Court Name"] as? String
                     let mobile = maindata["Mobile Number"] as? String
                     let casetype = maindata["Case type"] as? String
@@ -99,7 +101,7 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                         
                         
                     if self.email == lawyeremail && datestring == dateadd{
-                    self.casesearchdata.append(CaseDataModel(cname: cname!, courtname: courtname!, casetype: casetype!, mobile: mobile!, det: det!))
+                        self.casesearchdata.append(CaseDataModel(cid: clientid!, cname: cname!, courtname: courtname!, casetype: casetype!, mobile: mobile!, det: det!))
 
                        }
                      self.CaseDataTable.reloadData()
@@ -141,6 +143,7 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                     if let maindata = snap.value as? [String: AnyObject]{
                                         
                     let cname = maindata["Client Name"] as? String
+                    let clientid = maindata["Client ID"] as? String
                     let courtname = maindata["Court Name"] as? String
                     let mobile = maindata["Mobile Number"] as? String
                     let casetype = maindata["Case type"] as? String
@@ -163,7 +166,7 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                   //  print(fetchdatetoint)
                         if self.email == lawyeremail{
                             if (fetchrecorddate?.compare(monthofdate!) == .orderedSame && ( fetchrecordday?.compare(currentday!) == .orderedAscending || fetchrecordday?.compare(currentday!) == .orderedSame)) || (fetchrecorddate?.compare(stringtodate!) == .orderedSame && fetchrecordday?.compare(currentday!) == .orderedDescending) {
-                    self.casesearchdata.append(CaseDataModel(cname: cname!, courtname: courtname!, casetype: casetype!, mobile: mobile!, det: det!))
+                                self.casesearchdata.append(CaseDataModel(cid: clientid!, cname: cname!, courtname: courtname!, casetype: casetype!, mobile: mobile!, det: det!))
                 
                             }
 
@@ -190,7 +193,9 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detail:ShowCaseData = self.storyboard?.instantiateViewController(withIdentifier: "CaseDetails") as! ShowCaseData
         self.navigationController?.pushViewController(detail, animated:true)
+        
         detail.client = casesearchdata[indexPath.row].cname!
+        detail.clientID = casesearchdata[indexPath.row].cid!
         detail.det = casesearchdata[indexPath.row].details!
         detail.court = casesearchdata[indexPath.row].courtname!
         detail.type = casesearchdata[indexPath.row].casetype!

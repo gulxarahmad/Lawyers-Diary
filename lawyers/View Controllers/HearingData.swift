@@ -9,17 +9,27 @@
 import UIKit
 
 class HearingData: UITableViewCell {
+    
     @IBOutlet weak var cname: UILabel!
+    //@IBOutlet weak var cname: UILabel!
     
-    
-    @IBOutlet weak var htime: UILabel!
+    @IBOutlet weak var agenda: UILabel!
     
     @IBOutlet weak var hdate: UILabel!
+    
+    // @IBOutlet weak var htime: UILabel!
+    
+   
     var datashow: HearingDataModel?{
            didSet{
                cname.text = datashow?.cname
+<<<<<<< HEAD
 
                hdate.text = datashow?.hearingdate
+=======
+               hdate.text = datashow?.hearingtime
+            agenda.text = datashow?.hearingagenda
+>>>>>>> dev-Gulzar
 
            }
        }
