@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Firebase
+class ShowCaseData: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
-class ShowCaseData: UIViewController {
+    
+    @IBOutlet weak var HearingDataTable: UITableView!
     
     @IBOutlet weak var clientname: UILabel!
     
@@ -21,10 +24,15 @@ class ShowCaseData: UIViewController {
     @IBOutlet weak var casetype: UILabel!
     
     var client:String!
+    var clientID: String!
     var det:String!
     var court:String!
     var contact:String!
     var type:String!
+    var email:String!
+    var hearingsearchdata = [HearingDataModel]()
+    var keysArray = [String]()
+    var ref: DatabaseReference!
     override func viewDidLoad() {
         clientname.text = client
         details.text = det
@@ -37,15 +45,61 @@ class ShowCaseData: UIViewController {
         casetype.sizeToFit()
         contactnumber.sizeToFit()
         details.numberOfLines = 0
+        showalldata()
+        print (clientID)
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    func showalldata(){
+               
+               ref = Database.database().reference()
+               self.hearingsearchdata.removeAll()
+               let userID = Auth.auth().currentUser?.uid
+               ref.child("Lawyer").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+                                                               // Get user value
+               let value = snapshot.value as? NSDictionary
+               self.email = value?["email"] as? String ?? ""
+                self.ref.child("Hearings").queryOrderedByKey().observe(.value){ (snapshot) in
+                   
+                   if let snapShot = snapshot.children.allObjects as? [DataSnapshot]{
+                       for snap in snapShot{
+                        let key = snap.key
+                       if let maindata = snap.value as? [String: AnyObject]{
+                                           
+                       let cname = maindata["Client Name"] as? String
+                       let hearingdate = maindata["Hearing Date"] as? String
+                       let agenda = maindata["Agenda"] as? String
+                       let lawyeremail = maindata ["Email"] as? String
+                       let clientid = maindata["Client ID"] as? String
+                       let hearingid = maindata["Hearing ID"] as? String
+                       let nformatter = DateFormatter()
+                       nformatter.dateFormat = "MMM, dd, YYYY h:mm a"
+                       let stodate = nformatter.date(from: hearingdate!)
+                           nformatter.dateFormat = "MMM, dd, YYYY"
+                       let heardate = nformatter.string(from: stodate!)
+                           print(heardate)
+                       nformatter.dateFormat = "h:mm a"
+                       let heartime = nformatter.string(from: stodate!)
+                         print(heartime)
+
+                        if self.email == lawyeremail && self.clientID == clientid{
+                            self.hearingsearchdata.append(HearingDataModel(skey: key, hearingid: hearingid! ,cname: cname!,  hearingtime: heartime, hearingagenda: agenda!))
+                          }
+                         self.HearingDataTable.reloadData()
+                       }
+                                             
+                       }
+                   }
+               }
+          })
+       }
     
     @IBAction func addtohearing(_ sender: Any) {
         let addhearing:LawyerAddHearing = self.storyboard?.instantiateViewController(withIdentifier: "LAddHearing") as! LawyerAddHearing
     self.navigationController?.pushViewController(addhearing, animated:true)
         addhearing.setcname = client
+        addhearing.clientID = clientID
     }
     
 
@@ -59,4 +113,31 @@ class ShowCaseData: UIViewController {
     }
     */
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return hearingsearchdata.count
+            
+        }
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HearingData", for: indexPath) as! HearingData
+            cell.datashow = hearingsearchdata[indexPath.row]
+            return cell
+        }
+
+        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+            return 150
+
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+ 
+      
+            self.ref.child("Hearings").child(self.hearingsearchdata[indexPath.row].skey!).removeValue()
+         
+        hearingsearchdata.remove(at: indexPath.row)
+        HearingDataTable.deleteRows(at: [indexPath], with: .fade)
+        }
+
+    }
+   
 }

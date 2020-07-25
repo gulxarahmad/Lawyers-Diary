@@ -37,12 +37,15 @@ class LawyerHearings: UIViewController, UITableViewDataSource, UITableViewDelega
                 
                 if let snapShot = snapshot.children.allObjects as? [DataSnapshot]{
                     for snap in snapShot{
+                        let key = snap.key
                    
                     if let maindata = snap.value as? [String: AnyObject]{
                                         
                     let cname = maindata["Client Name"] as? String
                     let hearingdate = maindata["Hearing Date"] as? String
+                    let agenda = maindata["Agenda"] as? String
                     let lawyeremail = maindata ["Email"] as? String
+                    let hearid = maindata["Hearing ID"] as? String
                     let nformatter = DateFormatter()
                     nformatter.dateFormat = "MMM, dd, YYYY h:mm a"
                     let stodate = nformatter.date(from: hearingdate!)
@@ -54,7 +57,7 @@ class LawyerHearings: UIViewController, UITableViewDataSource, UITableViewDelega
                       print(heartime)
 
                     if self.email == lawyeremail{
-                        self.hearingsearchdata.append(HearingDataModel(cname: cname!,  hearingdate: hearingdate!))
+                        self.hearingsearchdata.append(HearingDataModel(skey:key, hearingid: hearid!, cname: cname!,  hearingtime: heartime, hearingagenda: agenda! ))
                        }
                       self.HearingDataTable.reloadData()
                     }
