@@ -13,14 +13,14 @@ class CaseDataModel{
     var cid: String?
     var courtname: String?
     var casetype: String?
-    var mobile: String?
+    var date: String?
     var details:String?
-    init (cid: String, cname: String, courtname: String, casetype: String, mobile: String, det: String){
+    init (cid: String, cname: String, courtname: String, casetype: String, date: String, det: String){
         self.cname = cname
         self.cid = cid
         self.courtname = courtname
         self.casetype = casetype
-        self.mobile = mobile
+        self.date = date
         self.details = det
     }
 }

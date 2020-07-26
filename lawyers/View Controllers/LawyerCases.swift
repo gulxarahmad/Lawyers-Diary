@@ -44,27 +44,28 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                                                         // Get user value
         let value = snapshot.value as? NSDictionary
         self.email = value?["email"] as? String ?? ""
-            ref.child("LawyerCases").queryOrderedByKey().observe(.value){ (snapshot) in
+            ref.child("Lawyer Cases").queryOrderedByKey().observe(.value){ (snapshot) in
             
             if let snapShot = snapshot.children.allObjects as? [DataSnapshot]{
                 for snap in snapShot{
                
                 if let maindata = snap.value as? [String: AnyObject]{
                                     
-                let cname = maindata["Client Name"] as? String
-                let clientid = maindata["Client ID"] as? String
+                let cname = maindata["Case Title"] as? String
+                let clientid = maindata["Case ID"] as? String
                 let courtname = maindata["Court Name"] as? String
-                let mobile = maindata["Mobile Number"] as? String
-                let casetype = maindata["Case type"] as? String
+                let casetype = maindata["Case Type"] as? String
                 let lawyeremail = maindata ["Email"] as? String
-                let det = maindata["Details"] as? String
+                let det = maindata["Case Details"] as? String
+                let dateadd = maindata["Date of Add"] as? String
                 if self.email == lawyeremail{
-                    self.casesearchdata.append(CaseDataModel(cid: clientid!, cname: cname!, courtname: courtname!, casetype: casetype!, mobile: mobile!, det:det!))
+                    self.casesearchdata.append(CaseDataModel(cid: clientid!, cname: cname!, courtname: courtname!, casetype: casetype!, date: dateadd!, det:det!))
                    }
-                  self.CaseDataTable.reloadData()
+                  
                 }
                                       
                 }
+                self.CaseDataTable.reloadData()
             }
         }
    })
@@ -83,32 +84,35 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                                                             // Get user value
             let value = snapshot.value as? NSDictionary
             self.email = value?["email"] as? String ?? ""
-                ref.child("LawyerCases").queryOrderedByKey().observe(.value){ (snapshot) in
+                ref.child("Lawyer Cases").queryOrderedByKey().observe(.value){ (snapshot) in
                 
                 if let snapShot = snapshot.children.allObjects as? [DataSnapshot]{
                     for snap in snapShot{
                    
                     if let maindata = snap.value as? [String: AnyObject]{
                                         
-                    let cname = maindata["Client Name"] as? String
-                    let clientid = maindata["Client ID"] as? String
+                    let cname = maindata["Case Title"] as? String
+                    let clientid = maindata["Case ID"] as? String
                     let courtname = maindata["Court Name"] as? String
-                    let mobile = maindata["Mobile Number"] as? String
-                    let casetype = maindata["Case type"] as? String
+                    let casetype = maindata["Case Type"] as? String
                     let lawyeremail = maindata ["Email"] as? String
-                    let det = maindata["Details"] as? String
+                    let det = maindata["Case Details"] as? String
                     let dateadd = maindata["Date of Add"] as? String
                         
+                     print(datestring)
+                     print(dateadd!)
                         
                     if self.email == lawyeremail && datestring == dateadd{
-                        self.casesearchdata.append(CaseDataModel(cid: clientid!, cname: cname!, courtname: courtname!, casetype: casetype!, mobile: mobile!, det: det!))
+                        self.casesearchdata.append(CaseDataModel(cid: clientid!, cname: cname!, courtname: courtname!, casetype: casetype!, date: dateadd!, det: det!))
 
                        }
-                     self.CaseDataTable.reloadData()
+                     
                     }
                                           
                     }
+                    
                 }
+                    self.CaseDataTable.reloadData()
             }
        })
     }
@@ -135,20 +139,19 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                                                             // Get user value
             let value = snapshot.value as? NSDictionary
             self.email = value?["email"] as? String ?? ""
-                ref.child("LawyerCases").queryOrderedByKey().observe(.value){ (snapshot) in
+                ref.child("Lawyer Cases").queryOrderedByKey().observe(.value){ (snapshot) in
                 
                 if let snapShot = snapshot.children.allObjects as? [DataSnapshot]{
                     for snap in snapShot{
                    
                     if let maindata = snap.value as? [String: AnyObject]{
                                         
-                    let cname = maindata["Client Name"] as? String
-                    let clientid = maindata["Client ID"] as? String
+                    let cname = maindata["Case Title"] as? String
+                    let clientid = maindata["Case ID"] as? String
                     let courtname = maindata["Court Name"] as? String
-                    let mobile = maindata["Mobile Number"] as? String
-                    let casetype = maindata["Case type"] as? String
+                    let casetype = maindata["Case Type"] as? String
                     let lawyeremail = maindata ["Email"] as? String
-                    let det = maindata["Details"] as? String
+                    let det = maindata["Case Details"] as? String
                     let dateadd = maindata["Date of Add"] as? String
                     let formatter = DateFormatter()
                     formatter.dateFormat = "M/d/yyyy"
@@ -166,16 +169,18 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                   //  print(fetchdatetoint)
                         if self.email == lawyeremail{
                             if (fetchrecorddate?.compare(monthofdate!) == .orderedSame && ( fetchrecordday?.compare(currentday!) == .orderedAscending || fetchrecordday?.compare(currentday!) == .orderedSame)) || (fetchrecorddate?.compare(stringtodate!) == .orderedSame && fetchrecordday?.compare(currentday!) == .orderedDescending) {
-                                self.casesearchdata.append(CaseDataModel(cid: clientid!, cname: cname!, courtname: courtname!, casetype: casetype!, mobile: mobile!, det: det!))
+                                self.casesearchdata.append(CaseDataModel(cid: clientid!, cname: cname!, courtname: courtname!, casetype: casetype!, date: dateadd!,  det: det!))
                 
                             }
 
                        }
-                     self.CaseDataTable.reloadData()
+                     
                     }
                                           
                     }
+                    
                 }
+               self.CaseDataTable.reloadData()
             }
        })
     }
@@ -195,11 +200,10 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
         self.navigationController?.pushViewController(detail, animated:true)
         
         detail.client = casesearchdata[indexPath.row].cname!
-        detail.clientID = casesearchdata[indexPath.row].cid!
+        detail.CaseID = casesearchdata[indexPath.row].cid!
         detail.det = casesearchdata[indexPath.row].details!
         detail.court = casesearchdata[indexPath.row].courtname!
         detail.type = casesearchdata[indexPath.row].casetype!
-        detail.contact = casesearchdata[indexPath.row].mobile!
         
     }
 

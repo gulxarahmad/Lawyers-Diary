@@ -24,7 +24,7 @@ class ShowCaseData: UIViewController, UITableViewDelegate, UITableViewDataSource
     @IBOutlet weak var casetype: UILabel!
     
     var client:String!
-    var clientID: String!
+    var CaseID: String!
     var det:String!
     var court:String!
     var contact:String!
@@ -46,7 +46,7 @@ class ShowCaseData: UIViewController, UITableViewDelegate, UITableViewDataSource
         contactnumber.sizeToFit()
         details.numberOfLines = 0
         showalldata()
-        print (clientID)
+        print (CaseID)
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -67,11 +67,11 @@ class ShowCaseData: UIViewController, UITableViewDelegate, UITableViewDataSource
                         let key = snap.key
                        if let maindata = snap.value as? [String: AnyObject]{
                                            
-                       let cname = maindata["Client Name"] as? String
+                       let cname = maindata["Case Title"] as? String
                        let hearingdate = maindata["Hearing Date"] as? String
                        let agenda = maindata["Agenda"] as? String
                        let lawyeremail = maindata ["Email"] as? String
-                       let clientid = maindata["Client ID"] as? String
+                       let clientid = maindata["Case ID"] as? String
                        let hearingid = maindata["Hearing ID"] as? String
                        let nformatter = DateFormatter()
                        nformatter.dateFormat = "MMM, dd, YYYY h:mm a"
@@ -83,8 +83,8 @@ class ShowCaseData: UIViewController, UITableViewDelegate, UITableViewDataSource
                        let heartime = nformatter.string(from: stodate!)
                          print(heartime)
 
-                        if self.email == lawyeremail && self.clientID == clientid{
-                            self.hearingsearchdata.append(HearingDataModel(skey: key, hearingid: hearingid! ,cname: cname!,  hearingtime: heartime, hearingagenda: agenda!))
+                        if self.email == lawyeremail && self.CaseID == clientid{
+                        self.hearingsearchdata.append(HearingDataModel(skey: key, hearingid: hearingid! ,cname: cname!, hearingtime: heartime, hearingagenda: agenda!))
                           }
                          self.HearingDataTable.reloadData()
                        }
@@ -99,7 +99,7 @@ class ShowCaseData: UIViewController, UITableViewDelegate, UITableViewDataSource
         let addhearing:LawyerAddHearing = self.storyboard?.instantiateViewController(withIdentifier: "LAddHearing") as! LawyerAddHearing
     self.navigationController?.pushViewController(addhearing, animated:true)
         addhearing.setcname = client
-        addhearing.clientID = clientID
+        addhearing.CaseID = CaseID
     }
     
 

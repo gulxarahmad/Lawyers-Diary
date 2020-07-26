@@ -41,7 +41,7 @@ class LawyerHearings: UIViewController, UITableViewDataSource, UITableViewDelega
                    
                     if let maindata = snap.value as? [String: AnyObject]{
                                         
-                    let cname = maindata["Client Name"] as? String
+                    let cname = maindata["Client Title"] as? String
                     let hearingdate = maindata["Hearing Date"] as? String
                     let agenda = maindata["Agenda"] as? String
                     let lawyeremail = maindata ["Email"] as? String
@@ -57,13 +57,8 @@ class LawyerHearings: UIViewController, UITableViewDataSource, UITableViewDelega
                       print(heartime)
 
                     if self.email == lawyeremail{
-<<<<<<< HEAD
 
-                        self.hearingsearchdata.append(HearingDataModel(cname: cname!, hearingdate: hearingdate!))
-
-=======
                         self.hearingsearchdata.append(HearingDataModel(skey:key, hearingid: hearid!, cname: cname!,  hearingtime: heartime, hearingagenda: agenda! ))
->>>>>>> dev-Gulzar
                        }
                       self.HearingDataTable.reloadData()
                     }

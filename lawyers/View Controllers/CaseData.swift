@@ -24,7 +24,6 @@ class CaseData: UITableViewCell {
             cname.text = datashow?.cname
             courtname.text = datashow?.courtname
             casetype.text = datashow?.casetype
-            number.text = datashow?.mobile
         }
     }
     
