@@ -1,17 +1,16 @@
 //
-//  CaseData.swift
+//  HistoryCaseData.swift
 //  lawyers
 //
-//  Created by hst on 08/05/2020.
+//  Created by hst on 27/07/2020.
 //  Copyright © 2020 hst. All rights reserved.
 //
 
 import UIKit
-protocol ShowCaseDelegate : class  {
-    func markcasedone(cell : CaseData)
+protocol DeleteCaseDelegate : class  {
+    func deletecase(cell : HistoryCaseData)
 }
-
-class CaseData: UITableViewCell {
+class HistoryCaseData: UITableViewCell {
     
     @IBOutlet weak var cname: UILabel!
     
@@ -20,26 +19,20 @@ class CaseData: UITableViewCell {
     @IBOutlet weak var casetype: UILabel!
     
     @IBOutlet weak var clientname: UILabel!
-    weak var delegate : ShowCaseDelegate!
+     weak var delegate : DeleteCaseDelegate!
+    var datashow: HistoryCaseModel?{
+          didSet{
+              cname.text = datashow?.cname
+              courtname.text = datashow?.courtname
+              casetype.text = datashow?.casetype
+              clientname.text = datashow?.clientname
+          }
+      }
     
-    
-
-    var datashow: CaseDataModel?{
-        didSet{
-            cname.text = datashow?.cname
-            courtname.text = datashow?.courtname
-            casetype.text = datashow?.casetype
-            clientname.text = datashow?.clientname
-        }
-    }
-    
-    
-
-    @IBAction func actionMarkDone(_ sender: Any) {
+    @IBAction func DeleteCase(_ sender: Any) {
         if let del = self.delegate{
-                  del.markcasedone(cell: self)
+                del.deletecase(cell: self)
               }
-        
     }
     
     override func awakeFromNib() {

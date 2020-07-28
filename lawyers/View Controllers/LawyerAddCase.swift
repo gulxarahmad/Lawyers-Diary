@@ -91,13 +91,11 @@ class LawyerAddCase: UIViewController, UITableViewDelegate, UITableViewDataSourc
                     self.email = value?["email"] as? String ?? ""
                     let cid = UUID().uuidString
                     print (cid)
-                    let ldata = ["Case ID":cid,"Case Title": name, "Client Details":cdetails, "Court Name": courtname, "Case type":type, "Email": self.email, "Date of Add":datestring] as [String: Any]
+                        let ldata = ["Case ID":cid,"Case Title": name, "Case Details":cdetails, "Court Name": courtname, "Case Type":type,"Client Name":mobile, "Email": self.email, "Date of Add":datestring, "Date of Done":"nil", "Post Key":"nil", "Source":"Manual", "Status":"inProgress"] as [String: Any]
                     let databaseRef = Database.database().reference()
-                    databaseRef.child("LawyerCases").childByAutoId().setValue(ldata)
+                    databaseRef.child("Lawyer Cases").childByAutoId().setValue(ldata)
                      
                         
-                    let lcase = self.storyboard?.instantiateViewController(withIdentifier: "LCases") as! LawyerCases
-                    self.navigationController?.pushViewController(lcase, animated: true)
                     self.showmessage("The Case has added succesfully!")
                        
                     })

@@ -22,12 +22,12 @@ class ClientRequests: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         self.RequestDataTable.reloadData()
-        allbtn.backgroundColor = UIColor.black
+/*        allbtn.backgroundColor = UIColor.black
         allbtn.setTitleColor(UIColor.white, for: .normal)
         monthbtn.backgroundColor = UIColor.white
         monthbtn.setTitleColor(UIColor.black, for: .normal)
         todaybtn.backgroundColor = UIColor.white
-        todaybtn.setTitleColor(UIColor.black, for: .normal)
+        todaybtn.setTitleColor(UIColor.black, for: .normal)*/
         showalldata()
         // Do any additional setup after loading the view.
     }
@@ -48,6 +48,7 @@ class ClientRequests: UIViewController, UITableViewDataSource, UITableViewDelega
                     if let maindata = snap.value as? [String: AnyObject]{
                                         
                     let ctitle = maindata["Case Title"] as? String
+                    let clientname = maindata["Client Name"] as? String
                     let postid = maindata["Post ID"] as? String
                     let courtname = maindata["Court Name"] as? String
                     let city = maindata["City"] as? String
@@ -57,7 +58,7 @@ class ClientRequests: UIViewController, UITableViewDataSource, UITableViewDelega
                      let date = maindata["Date of Add"] as? String
                         
                         if status == "Pending"{
-                            self.requestsearchdata.append(RequestDataModel(requestkey: key, postid: postid!, casetitle: ctitle!, courtname: courtname!, casetype: casetype!, city: city!, details: det!, date: date!))
+                            self.requestsearchdata.append(RequestDataModel(requestkey: key, postid: postid!, casetitle: ctitle!, courtname: courtname!, casetype: casetype!, city: city!, details: det!, date: date!,clientname:clientname!))
  
                       
                         }
@@ -91,7 +92,11 @@ extension ClientRequests : RequestDataDelegate{
     func acceptCaseRequest(cell: RequestData) {
         let indexPath = self.RequestDataTable.indexPath(for: cell)
         let status = ["Status":"Accepted"]
-       
+       let currentdate = Date()
+    let formatter = DateFormatter()
+                     //  formatter.dateStyle = .MM/dd/yyyy
+        formatter.dateFormat = "M/d/yyyy"
+    let datestring = formatter.string(from: currentdate)
       let userID = Auth.auth().currentUser?.uid
     ref.child("Lawyer").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
                                                // Get user value
@@ -100,13 +105,18 @@ extension ClientRequests : RequestDataDelegate{
         let cid = UUID().uuidString
         print (cid)
         let casedata = [
+            "Post Key": self.requestsearchdata[indexPath!.row].requestkey,
             "Case Title": self.requestsearchdata[indexPath!.row].casetitle,
             "Case Details": self.requestsearchdata[indexPath!.row].details,
-            "Date of Add": self.requestsearchdata [indexPath!.row].date,
+            "Date of Add":datestring,
+            "Date of Done": "nil",
             "Case Type" : self.requestsearchdata [indexPath!.row].casetype,
            "Case ID": cid,
+           "Source":"Request",
+           "Status":"inProgress",
            "Court Name": self.requestsearchdata [indexPath!.row].courtname,
-            "Email": self.email
+            "Email": self.email,
+            "Client Name": self.requestsearchdata[indexPath!.row].clientname
         ]
         self.ref.child("Lawyer Cases").childByAutoId().setValue(casedata)
         self.requestsearchdata.remove(at: indexPath!.row)
@@ -115,6 +125,7 @@ extension ClientRequests : RequestDataDelegate{
     })
         
         ref.child("Client Post Requests").child(requestsearchdata[indexPath!.row].requestkey!).updateChildValues(status)
+        
 
  }
 }

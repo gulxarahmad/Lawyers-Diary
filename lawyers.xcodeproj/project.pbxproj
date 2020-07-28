@@ -40,6 +40,18 @@
 		097BD8B02407A5DD0094AAC1 /* signupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097BD8AF2407A5DD0094AAC1 /* signupViewController.swift */; };
 		097BD8B524085F570094AAC1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097BD8B424085F570094AAC1 /* Constants.swift */; };
 		097BD8B8240863320094AAC1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097BD8B7240863320094AAC1 /* Utilities.swift */; };
+		0982B19324CF277700317525 /* ShowPostRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0982B19224CF277700317525 /* ShowPostRequests.swift */; };
+		0982B19524CF295F00317525 /* ShowRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0982B19424CF295F00317525 /* ShowRequestData.swift */; };
+		0982B19724CF2AE100317525 /* ShowRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0982B19624CF2AE100317525 /* ShowRequestModel.swift */; };
+		0982B19924CF493700317525 /* HistoryCaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0982B19824CF493700317525 /* HistoryCaseModel.swift */; };
+		0982B19B24CF495E00317525 /* HistoryCaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0982B19A24CF495E00317525 /* HistoryCaseData.swift */; };
+		0982B19D24CF498E00317525 /* HistoryCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0982B19C24CF498E00317525 /* HistoryCases.swift */; };
+		0982B19F24D0175D00317525 /* CompleteCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0982B19E24D0175D00317525 /* CompleteCases.swift */; };
+		0982B1A124D0178C00317525 /* CompleteCasesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0982B1A024D0178C00317525 /* CompleteCasesData.swift */; };
+		0982B1A324D017AF00317525 /* CompleteCasesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0982B1A224D017AF00317525 /* CompleteCasesModel.swift */; };
+		0982B1A524D0400400317525 /* ManualCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0982B1A424D0400300317525 /* ManualCases.swift */; };
+		0982B1A724D0404800317525 /* ManualCasesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0982B1A624D0404800317525 /* ManualCasesData.swift */; };
+		0982B1A924D040D900317525 /* ManualCasesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0982B1A824D040D900317525 /* ManualCasesModel.swift */; };
 		09BC944B245CC09A00ECA565 /* ClientLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC944A245CC09A00ECA565 /* ClientLogin.swift */; };
 		09BC944E245CC8D900ECA565 /* Client Sign Up.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC944D245CC8D900ECA565 /* Client Sign Up.swift */; };
 		09BC9450245D77DC00ECA565 /* Client Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BC944F245D77DC00ECA565 /* Client Home.swift */; };
@@ -94,6 +106,18 @@
 		097BD8AF2407A5DD0094AAC1 /* signupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupViewController.swift; sourceTree = "<group>"; };
 		097BD8B424085F570094AAC1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		097BD8B7240863320094AAC1 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		0982B19224CF277700317525 /* ShowPostRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPostRequests.swift; sourceTree = "<group>"; };
+		0982B19424CF295F00317525 /* ShowRequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRequestData.swift; sourceTree = "<group>"; };
+		0982B19624CF2AE100317525 /* ShowRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRequestModel.swift; sourceTree = "<group>"; };
+		0982B19824CF493700317525 /* HistoryCaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCaseModel.swift; sourceTree = "<group>"; };
+		0982B19A24CF495E00317525 /* HistoryCaseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCaseData.swift; sourceTree = "<group>"; };
+		0982B19C24CF498E00317525 /* HistoryCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCases.swift; sourceTree = "<group>"; };
+		0982B19E24D0175D00317525 /* CompleteCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteCases.swift; sourceTree = "<group>"; };
+		0982B1A024D0178C00317525 /* CompleteCasesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteCasesData.swift; sourceTree = "<group>"; };
+		0982B1A224D017AF00317525 /* CompleteCasesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteCasesModel.swift; sourceTree = "<group>"; };
+		0982B1A424D0400300317525 /* ManualCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualCases.swift; sourceTree = "<group>"; };
+		0982B1A624D0404800317525 /* ManualCasesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualCasesData.swift; sourceTree = "<group>"; };
+		0982B1A824D040D900317525 /* ManualCasesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualCasesModel.swift; sourceTree = "<group>"; };
 		09BC944A245CC09A00ECA565 /* ClientLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientLogin.swift; sourceTree = "<group>"; };
 		09BC944D245CC8D900ECA565 /* Client Sign Up.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Client Sign Up.swift"; sourceTree = "<group>"; };
 		09BC944F245D77DC00ECA565 /* Client Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Client Home.swift"; sourceTree = "<group>"; };
@@ -190,6 +214,12 @@
 				090EA23F24CDAB9B00325B36 /* ClientRequests.swift */,
 				090EA24324CDAE9A00325B36 /* RequestData.swift */,
 				090EA24524CDAF9E00325B36 /* RequestDataModel.swift */,
+				0982B19824CF493700317525 /* HistoryCaseModel.swift */,
+				0982B19A24CF495E00317525 /* HistoryCaseData.swift */,
+				0982B19C24CF498E00317525 /* HistoryCases.swift */,
+				0982B1A424D0400300317525 /* ManualCases.swift */,
+				0982B1A624D0404800317525 /* ManualCasesData.swift */,
+				0982B1A824D040D900317525 /* ManualCasesModel.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -220,6 +250,12 @@
 				09F81EB62469D20C00072B54 /* ClientFAQs.swift */,
 				090EA23B24CC676200325B36 /* ClientUpdateProfile.swift */,
 				090EA23D24CDA1A100325B36 /* PostRequest.swift */,
+				0982B19224CF277700317525 /* ShowPostRequests.swift */,
+				0982B19424CF295F00317525 /* ShowRequestData.swift */,
+				0982B19624CF2AE100317525 /* ShowRequestModel.swift */,
+				0982B19E24D0175D00317525 /* CompleteCases.swift */,
+				0982B1A024D0178C00317525 /* CompleteCasesData.swift */,
+				0982B1A224D017AF00317525 /* CompleteCasesModel.swift */,
 			);
 			path = "Client View Controller";
 			sourceTree = "<group>";
@@ -357,31 +393,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0982B19924CF493700317525 /* HistoryCaseModel.swift in Sources */,
 				097BD8AE2407A5CD0094AAC1 /* LoginViewController.swift in Sources */,
+				0982B19D24CF498E00317525 /* HistoryCases.swift in Sources */,
 				09BC9464245D7DF800ECA565 /* LawyerHelp.swift in Sources */,
+				0982B1A724D0404800317525 /* ManualCasesData.swift in Sources */,
+				0982B19524CF295F00317525 /* ShowRequestData.swift in Sources */,
 				097BD8B02407A5DD0094AAC1 /* signupViewController.swift in Sources */,
+				0982B1A924D040D900317525 /* ManualCasesModel.swift in Sources */,
 				09BC946A245D808200ECA565 /* LawyerHome.swift in Sources */,
 				0963CB66245F3BAB00DEE057 /* LawyerCases.swift in Sources */,
 				0963CB6C246024FD00DEE057 /* FindLawyerModel.swift in Sources */,
+				0982B19324CF277700317525 /* ShowPostRequests.swift in Sources */,
 				09F81EB52469CF5A00072B54 /* ClientHelp.swift in Sources */,
 				0963CBC024658D3000DEE057 /* CaseData.swift in Sources */,
 				09F81EB72469D20C00072B54 /* ClientFAQs.swift in Sources */,
+				0982B19F24D0175D00317525 /* CompleteCases.swift in Sources */,
 				090EA23E24CDA1A100325B36 /* PostRequest.swift in Sources */,
 				0963CBBE24657B0500DEE057 /* LawyerAddCase.swift in Sources */,
 				0963CBBC2463749700DEE057 /* MainViewController.swift in Sources */,
 				093367EC24CA0C560059F422 /* LawyerMessages.swift in Sources */,
 				0963CBC224658E0000DEE057 /* CaseDataModel.swift in Sources */,
+				0982B1A524D0400400317525 /* ManualCases.swift in Sources */,
 				0970AA1E246970B8000E4057 /* Lawyer FAQs.swift in Sources */,
 				095031AD246AD3A60065BF26 /* HearingDataModel.swift in Sources */,
 				0963CB64245DC15B00DEE057 /* LawyerDiary.swift in Sources */,
+				0982B1A324D017AF00317525 /* CompleteCasesModel.swift in Sources */,
 				185C0C4B2468582F0074F437 /* AddNewClientController.swift in Sources */,
 				090EA24424CDAE9A00325B36 /* RequestData.swift in Sources */,
 				095031A7246AD0440065BF26 /* LawyerHearings.swift in Sources */,
 				09BC9450245D77DC00ECA565 /* Client Home.swift in Sources */,
 				097BD8B524085F570094AAC1 /* Constants.swift in Sources */,
 				09BC9474245D876000ECA565 /* LawyerNotifications.swift in Sources */,
+				0982B19B24CF495E00317525 /* HistoryCaseData.swift in Sources */,
+				0982B19724CF2AE100317525 /* ShowRequestModel.swift in Sources */,
 				093367F024CC20410059F422 /* UpdateProfile.swift in Sources */,
 				09BC947A245D8D7500ECA565 /* ClientNotifications.swift in Sources */,
+				0982B1A124D0178C00317525 /* CompleteCasesData.swift in Sources */,
 				0963CBBA246350FB00DEE057 /* ClientProfile.swift in Sources */,
 				09BC9456245D7D4D00ECA565 /* Laws.swift in Sources */,
 				09BC944E245CC8D900ECA565 /* Client Sign Up.swift in Sources */,
