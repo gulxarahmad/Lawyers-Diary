@@ -1,14 +1,6 @@
-//
-//  CaseDataModel.swift
-//  lawyers
-//
-//  Created by hst on 08/05/2020.
-//  Copyright © 2020 hst. All rights reserved.
-//
-
 import UIKit
 import Foundation
-class CaseDataModel{
+class ManualCasesModel{
     var cname: String?
     var clientname: String?
     var cid: String?

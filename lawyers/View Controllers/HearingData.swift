@@ -11,9 +11,10 @@ import UIKit
 class HearingData: UITableViewCell {
     
     @IBOutlet weak var cname: UILabel!
-    //@IBOutlet weak var cname: UILabel!
-    
     @IBOutlet weak var agenda: UILabel!
+    //@IBOutlet weak var cname: UILabel!
+
+    
     
     @IBOutlet weak var hdate: UILabel!
     
@@ -23,8 +24,10 @@ class HearingData: UITableViewCell {
     var datashow: HearingDataModel?{
            didSet{
                cname.text = datashow?.cname
+
                hdate.text = datashow?.hearingtime
-            agenda.text = datashow?.hearingagenda
+                agenda.text = datashow?.hearingagenda
+
 
            }
        }

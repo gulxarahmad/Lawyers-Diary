@@ -12,6 +12,7 @@ class HearingDataModel{
     var skey:String?
     var hearingid: String?
     var cname: String?
+
     var hearingtime: String?
     var hearingagenda: String?
     init (skey: String, hearingid: String, cname: String,  hearingtime: String, hearingagenda: String){

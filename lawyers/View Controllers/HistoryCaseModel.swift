@@ -8,7 +8,7 @@
 
 import UIKit
 import Foundation
-class CaseDataModel{
+class HistoryCaseModel{
     var cname: String?
     var clientname: String?
     var cid: String?
@@ -16,9 +16,8 @@ class CaseDataModel{
     var casetype: String?
     var date: String?
     var details:String?
-    var source:String?
     var skey:String?
-    init (cid: String, cname: String, courtname: String, casetype: String, date: String, det: String,source:String, clientname: String,skey:String){
+    init (cid: String, cname: String, courtname: String, casetype: String, date: String, det: String, clientname: String,skey:String){
         self.cname = cname
         self.cid = cid
         self.courtname = courtname
@@ -27,6 +26,5 @@ class CaseDataModel{
         self.details = det
         self.clientname = clientname
         self.skey = skey
-        self.source = source
     }
 }
