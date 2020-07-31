@@ -63,11 +63,12 @@ class ShowPostRequests: UIViewController, UITableViewDataSource, UITableViewDele
                                 let status = maindata["Status"] as? String
                                let dateadd = maindata["Date of Add"] as? String
                                let clientemail = maindata["Email"] as? String
+                               let lawyerid = maindata ["Lawyer ID"] as? String
 
  
                             if self.email == clientemail && status != "Complete"{
                             
-                        self.postsearchdata.append(ShowRequestModel(requestkey: key, postid: postid!, casetitle: ctitle!, courtname: courtname!, casetype: casetype!, status: status!, details: det!, date: dateadd!))
+                        self.postsearchdata.append(ShowRequestModel(requestkey: key, postid: postid!, casetitle: ctitle!, courtname: courtname!, casetype: casetype!, status: status!, details: det!, date: dateadd!, lawyerid: lawyerid!))
                     
                                 
 
@@ -110,10 +111,11 @@ class ShowPostRequests: UIViewController, UITableViewDataSource, UITableViewDele
                              let status = maindata["Status"] as? String
                             let dateadd = maindata["Date of Add"] as? String
                             let clientemail = maindata["Email"] as? String
+                                  let lawyerid = maindata ["Lawyer ID"] as? String
 
                          if self.email == clientemail && status == "Pending"{
                             
-                                 self.postsearchdata.append(ShowRequestModel(requestkey: key, postid: postid!, casetitle: ctitle!, courtname: courtname!, casetype: casetype!, status: status!, details: det!, date: dateadd!))
+                                 self.postsearchdata.append(ShowRequestModel(requestkey: key, postid: postid!, casetitle: ctitle!, courtname: courtname!, casetype: casetype!, status: status!, details: det!, date: dateadd!, lawyerid: lawyerid!))
                  
                              
 
@@ -156,10 +158,11 @@ class ShowPostRequests: UIViewController, UITableViewDataSource, UITableViewDele
                         let status = maindata["Status"] as? String
                        let dateadd = maindata["Date of Add"] as? String
                        let clientemail = maindata["Email"] as? String
+                              let lawyerid = maindata ["Lawyer ID"] as? String
 
                         
                     if self.email == clientemail && status == "Accepted"{
-                       self.postsearchdata.append(ShowRequestModel(requestkey: key, postid: postid!, casetitle: ctitle!, courtname: courtname!, casetype: casetype!, status: status!, details: det!, date: dateadd!))
+                       self.postsearchdata.append(ShowRequestModel(requestkey: key, postid: postid!, casetitle: ctitle!, courtname: courtname!, casetype: casetype!, status: status!, details: det!, date: dateadd!, lawyerid: lawyerid!))
                        }
                      
                     }
