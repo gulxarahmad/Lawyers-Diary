@@ -18,7 +18,8 @@ class ShowRequestModel{
     var status: String?
     var details:String?
     var date: String?
-    init (requestkey:String, postid: String, casetitle: String, courtname: String, casetype: String, status: String, details: String, date: String){
+    var lawyerid: String?
+    init (requestkey:String, postid: String, casetitle: String, courtname: String, casetype: String, status: String, details: String, date: String, lawyerid: String){
         self.casetitle = casetitle
         self.requestkey = requestkey
         self.postid = postid
@@ -27,5 +28,6 @@ class ShowRequestModel{
         self.status = status
         self.details = details
         self.date = date
+        self.lawyerid = lawyerid
     }
 }
