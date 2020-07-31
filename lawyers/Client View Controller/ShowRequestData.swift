@@ -9,6 +9,7 @@
 import UIKit
 protocol MarkCompleteDelegate : class  {
     func markcomplete(cell : ShowRequestData)
+    func sendMessage(cell : ShowRequestData)
 }
 
 class ShowRequestData: UITableViewCell {
@@ -41,6 +42,12 @@ class ShowRequestData: UITableViewCell {
         if let del = self.delegate{
         del.markcomplete(cell: self)
               }
+    }
+    
+    @IBAction func actionSendMessage(_ sender: Any) {
+        if let del = self.delegate{
+              del.sendMessage(cell: self)
+        }
     }
     
     

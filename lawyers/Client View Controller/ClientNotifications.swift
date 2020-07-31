@@ -27,7 +27,8 @@ class ClientNotifications: UIViewController {
         
 
         
-        @IBAction func didTapAdd(){
+    @available(iOS 13.0, *)
+    @IBAction func didTapAdd(){
             
             // show add vc
             guard let vc = storyboard?.instantiateViewController(identifier: "added") as? AddNewClientController else {

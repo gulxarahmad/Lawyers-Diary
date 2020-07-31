@@ -261,24 +261,11 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
 
 
 }
-extension LawyerCases: ShowCaseDelegate{
-    func markcasedone(cell: CaseData) {
-
-        
-        let currentdate = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "M/d/yyyy"
-        let datestring = formatter.string(from: currentdate)
-        let indexPath = self.CaseDataTable.indexPath(for: cell)
-        let updates = ["Status":"Done",
-                       "Date of Done":datestring
-        ]
-        ref.child("Lawyer Cases").child(casesearchdata[indexPath!.row].skey!).updateChildValues(updates)
-       
-      //  self.casesearchdata.remove(at: indexPath!.row)
-        self.casesearchdata.removeAll()
-        self.CaseDataTable.reloadData()
-        
-
+extension LawyerCases: CaseDataDelegate{
+    func sendMessage(cell: CaseData) {
+        let index = self.CaseDataTable.indexPath(for: cell)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
+        vc.otherUserId = self.casesearchdata[index!.row].clientid!
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
