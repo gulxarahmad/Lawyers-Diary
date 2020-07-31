@@ -224,6 +224,13 @@ class ShowPostRequests: UIViewController, UITableViewDataSource, UITableViewDele
 }
 
 extension ShowPostRequests: MarkCompleteDelegate{
+    func sendMessage(cell: ShowRequestData) {
+         let indexPath = self.ShowPostTable.indexPath(for: cell)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
+        vc.otherUserId = self.postsearchdata[indexPath!.row].lawyerid!
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func markcomplete(cell: ShowRequestData) {
         let currentdate = Date()
               let formatter = DateFormatter()
@@ -260,11 +267,5 @@ extension ShowPostRequests: MarkCompleteDelegate{
        self.ShowPostTable.reloadData()
 
                })
-
-
-       
-
-        
-
     }
 }

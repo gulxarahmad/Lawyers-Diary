@@ -265,7 +265,7 @@ extension LawyerCases: CaseDataDelegate{
     func sendMessage(cell: CaseData) {
         let index = self.CaseDataTable.indexPath(for: cell)
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
-        vc.otherUserId = self.casesearchdata[index!.row].cid!
+        vc.otherUserId = self.casesearchdata[index!.row].clientid!
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
