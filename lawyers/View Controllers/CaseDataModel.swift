@@ -19,7 +19,8 @@ class CaseDataModel{
     var source:String?
     var skey:String?
     var clientid: String?
-    init (cid: String, cname: String, courtname: String, casetype: String, date: String, det: String,source:String, clientname: String,skey:String, clientid: String){
+    var postkey: String?
+    init (cid: String, cname: String, courtname: String, casetype: String, date: String, det: String,source:String, clientname: String,skey:String, clientid: String, postkey: String){
         self.cname = cname
         self.cid = cid
         self.courtname = courtname
@@ -30,5 +31,6 @@ class CaseDataModel{
         self.skey = skey
         self.source = source
         self.clientid = clientid
+        self.postkey = postkey
     }
 }

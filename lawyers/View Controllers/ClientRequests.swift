@@ -125,7 +125,7 @@ extension ClientRequests : RequestDataDelegate{
             "Client Name": self.requestsearchdata[indexPath!.row].clientname
         ]
         print(self.lawyerid!)
-        let status = ["Status":"Accepted", "Lawyer ID":self.lawyerid]
+        let status = ["Status":"Accepted", "Lawyer ID":self.lawyerid, "Case ID":cid]
         
         self.ref.child("Client Post Requests").child(self.requestsearchdata[indexPath!.row].requestkey!).updateChildValues(status)
         self.ref.child("Lawyer Cases").childByAutoId().setValue(casedata)

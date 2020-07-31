@@ -63,8 +63,9 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                 let dateadd = maindata["Date of Add"] as? String
                 let status = maindata["Status"] as? String
                 let source = maindata["Source"] as? String
+                let postkey = maindata["Post Key"] as? String
                     if self.email == lawyeremail && status == "inProgress" && source == "Request"{
-                        self.casesearchdata.append(CaseDataModel(cid: caseid!, cname: cname!, courtname: courtname!, casetype: casetype!, date: dateadd!, det:det!, source:source!, clientname: clientname!,skey:key, clientid: clientid!))
+                        self.casesearchdata.append(CaseDataModel(cid: caseid!, cname: cname!, courtname: courtname!, casetype: casetype!, date: dateadd!, det:det!, source:source!, clientname: clientname!,skey:key, clientid: clientid!, postkey: postkey!))
                    }
                   
                 }
@@ -106,13 +107,14 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                     let det = maindata["Case Details"] as? String
                     let dateadd = maindata["Date of Add"] as? String
                     let status = maindata["Status"] as? String
-                        let source = maindata["Source"] as? String
+                    let source = maindata["Source"] as? String
+                    let postkey = maindata["Case ID"] as? String
                         
                      print(datestring)
                      print(dateadd!)
                         
                     if self.email == lawyeremail && datestring == dateadd && status == "inProgress" && source == "Request"{
-                        self.casesearchdata.append(CaseDataModel(cid: caseid!, cname: cname!, courtname: courtname!, casetype: casetype!, date: dateadd!, det: det!,source:source!, clientname: clientname!,skey:key, clientid: clientid!))
+                        self.casesearchdata.append(CaseDataModel(cid: caseid!, cname: cname!, courtname: courtname!, casetype: casetype!, date: dateadd!, det: det!,source:source!, clientname: clientname!,skey:key, clientid: clientid!, postkey: postkey!))
 
                        }
                      
@@ -165,6 +167,7 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                     let dateadd = maindata["Date of Add"] as? String
                         let status = maindata["Status"] as? String
                         let source = maindata["Source"] as? String
+                        let postkey = maindata["Case ID"] as? String
                     let formatter = DateFormatter()
                     formatter.dateFormat = "M/d/yyyy"
                     let stodate = formatter.date(from: dateadd!)
@@ -181,7 +184,7 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                   //  print(fetchdatetoint)
                         if self.email == lawyeremail && status == "inProgress" && source == "Request"{
                             if (fetchrecorddate?.compare(monthofdate!) == .orderedSame && ( fetchrecordday?.compare(currentday!) == .orderedAscending || fetchrecordday?.compare(currentday!) == .orderedSame)) || (fetchrecorddate?.compare(stringtodate!) == .orderedSame && fetchrecordday?.compare(currentday!) == .orderedDescending) {
-                                self.casesearchdata.append(CaseDataModel(cid: caseid!, cname: cname!, courtname: courtname!, casetype: casetype!, date: dateadd!,  det: det!,source:source!, clientname: clientname!,skey:key, clientid: clientid!))
+                                self.casesearchdata.append(CaseDataModel(cid: caseid!, cname: cname!, courtname: courtname!, casetype: casetype!, date: dateadd!,  det: det!,source:source!, clientname: clientname!,skey:key, clientid: clientid!, postkey: postkey!))
                 
                             }
 

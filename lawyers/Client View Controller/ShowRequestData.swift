@@ -20,6 +20,8 @@ class ShowRequestData: UITableViewCell {
     @IBOutlet weak var status: UILabel!
     
     @IBOutlet weak var completebtn: UIButton!
+    @IBOutlet weak var sendmsgbtn: UIButton!
+    
     weak var delegate : MarkCompleteDelegate!
     var datashow: ShowRequestModel?{
               didSet{
@@ -30,10 +32,12 @@ class ShowRequestData: UITableViewCell {
                 if status.text == "Accepted"{
                     status.textColor = UIColor.green
                     completebtn.isHidden = false
+                    sendmsgbtn.isHidden = false
                 }
                 else{
                     status.textColor = UIColor.red
                     completebtn.isHidden = true
+                    sendmsgbtn.isHidden = true
                 }
               }
           }
