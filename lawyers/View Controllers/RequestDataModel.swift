@@ -10,7 +10,8 @@ class RequestDataModel{
     var details:String?
     var date: String?
     var clientname: String?
-    init (requestkey:String, postid: String, casetitle: String, courtname: String, casetype: String, city: String, details: String, date: String, clientname: String){
+    var clientid: String?
+    init (requestkey:String, postid: String, casetitle: String, courtname: String, casetype: String, city: String, details: String, date: String, clientname: String, clientid: String){
         self.casetitle = casetitle
         self.requestkey = requestkey
         self.postid = postid
@@ -20,5 +21,6 @@ class RequestDataModel{
         self.details = details
         self.date = date
         self.clientname = clientname
+        self.clientid = clientid
     }
 }
