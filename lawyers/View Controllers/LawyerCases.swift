@@ -54,7 +54,8 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                                     
                 let cname = maindata["Case Title"] as? String
                 let clientname = maindata["Client Name"] as? String
-                let clientid = maindata["Case ID"] as? String
+                let caseid = maindata["Case ID"] as? String
+                let clientid = maindata["Client ID"] as? String
                 let courtname = maindata["Court Name"] as? String
                 let casetype = maindata["Case Type"] as? String
                 let lawyeremail = maindata ["Email"] as? String
@@ -63,7 +64,7 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                 let status = maindata["Status"] as? String
                 let source = maindata["Source"] as? String
                     if self.email == lawyeremail && status == "inProgress" && source == "Request"{
-                        self.casesearchdata.append(CaseDataModel(cid: clientid!, cname: cname!, courtname: courtname!, casetype: casetype!, date: dateadd!, det:det!, source:source!, clientname: clientname!,skey:key))
+                        self.casesearchdata.append(CaseDataModel(cid: caseid!, cname: cname!, courtname: courtname!, casetype: casetype!, date: dateadd!, det:det!, source:source!, clientname: clientname!,skey:key, clientid: clientid!))
                    }
                   
                 }
@@ -96,7 +97,8 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                     if let maindata = snap.value as? [String: AnyObject]{
                                         
                     let cname = maindata["Case Title"] as? String
-                    let clientid = maindata["Case ID"] as? String
+                    let caseid = maindata["Case ID"] as? String
+                    let clientid = maindata["Client ID"] as? String
                     let clientname = maindata["Client Name"] as? String
                     let courtname = maindata["Court Name"] as? String
                     let casetype = maindata["Case Type"] as? String
@@ -110,7 +112,7 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                      print(dateadd!)
                         
                     if self.email == lawyeremail && datestring == dateadd && status == "inProgress" && source == "Request"{
-                        self.casesearchdata.append(CaseDataModel(cid: clientid!, cname: cname!, courtname: courtname!, casetype: casetype!, date: dateadd!, det: det!,source:source!, clientname: clientname!,skey:key))
+                        self.casesearchdata.append(CaseDataModel(cid: caseid!, cname: cname!, courtname: courtname!, casetype: casetype!, date: dateadd!, det: det!,source:source!, clientname: clientname!,skey:key, clientid: clientid!))
 
                        }
                      
@@ -153,7 +155,8 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                     if let maindata = snap.value as? [String: AnyObject]{
                                         
                     let cname = maindata["Case Title"] as? String
-                    let clientid = maindata["Case ID"] as? String
+                    let caseid = maindata["Case ID"] as? String
+                    let clientid = maindata["Client ID"] as? String
                      let clientname = maindata["Client Name"] as? String
                     let courtname = maindata["Court Name"] as? String
                     let casetype = maindata["Case Type"] as? String
@@ -178,7 +181,7 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                   //  print(fetchdatetoint)
                         if self.email == lawyeremail && status == "inProgress" && source == "Request"{
                             if (fetchrecorddate?.compare(monthofdate!) == .orderedSame && ( fetchrecordday?.compare(currentday!) == .orderedAscending || fetchrecordday?.compare(currentday!) == .orderedSame)) || (fetchrecorddate?.compare(stringtodate!) == .orderedSame && fetchrecordday?.compare(currentday!) == .orderedDescending) {
-                                self.casesearchdata.append(CaseDataModel(cid: clientid!, cname: cname!, courtname: courtname!, casetype: casetype!, date: dateadd!,  det: det!,source:source!, clientname: clientname!,skey:key))
+                                self.casesearchdata.append(CaseDataModel(cid: caseid!, cname: cname!, courtname: courtname!, casetype: casetype!, date: dateadd!,  det: det!,source:source!, clientname: clientname!,skey:key, clientid: clientid!))
                 
                             }
 

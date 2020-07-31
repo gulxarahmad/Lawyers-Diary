@@ -18,6 +18,7 @@ class ClientRequests: UIViewController, UITableViewDataSource, UITableViewDelega
     var requestsearchdata = [RequestDataModel]()
     var email: String!
     var city: String!
+    var lawyerid: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,9 +57,10 @@ class ClientRequests: UIViewController, UITableViewDataSource, UITableViewDelega
                     let det = maindata["Details"] as? String
                     let status = maindata["Status"] as? String
                      let date = maindata["Date of Add"] as? String
+                     let clientid = maindata["Client ID"] as? String
                         
                         if status == "Pending"{
-                            self.requestsearchdata.append(RequestDataModel(requestkey: key, postid: postid!, casetitle: ctitle!, courtname: courtname!, casetype: casetype!, city: city!, details: det!, date: date!,clientname:clientname!))
+                            self.requestsearchdata.append(RequestDataModel(requestkey: key, postid: postid!, casetitle: ctitle!, courtname: courtname!, casetype: casetype!, city: city!, details: det!, date: date!,clientname:clientname!, clientid: clientid!))
  
                       
                         }
@@ -91,7 +93,7 @@ class ClientRequests: UIViewController, UITableViewDataSource, UITableViewDelega
 extension ClientRequests : RequestDataDelegate{
     func acceptCaseRequest(cell: RequestData) {
         let indexPath = self.RequestDataTable.indexPath(for: cell)
-        let status = ["Status":"Accepted"]
+        
        let currentdate = Date()
     let formatter = DateFormatter()
                      //  formatter.dateStyle = .MM/dd/yyyy
@@ -102,6 +104,8 @@ extension ClientRequests : RequestDataDelegate{
                                                // Get user value
     let value = snapshot.value as? NSDictionary
     self.email = value?["email"] as? String ?? ""
+    self.lawyerid = value?["ID"] as? String ?? ""
+
         let cid = UUID().uuidString
         print (cid)
         let casedata = [
@@ -116,15 +120,20 @@ extension ClientRequests : RequestDataDelegate{
            "Status":"inProgress",
            "Court Name": self.requestsearchdata [indexPath!.row].courtname,
             "Email": self.email,
+            "Lawyer ID": self.lawyerid,
+            "Client ID" : self.requestsearchdata[indexPath!.row].clientid,
             "Client Name": self.requestsearchdata[indexPath!.row].clientname
         ]
+        print(self.lawyerid!)
+        let status = ["Status":"Accepted", "Lawyer ID":self.lawyerid]
+        
+        self.ref.child("Client Post Requests").child(self.requestsearchdata[indexPath!.row].requestkey!).updateChildValues(status)
         self.ref.child("Lawyer Cases").childByAutoId().setValue(casedata)
         self.requestsearchdata.remove(at: indexPath!.row)
         self.RequestDataTable.reloadData()
       //  ref.child("Client Post Requests").child(self.requestsearchdata[IndexPath,row].requestkey!)
     })
-        
-        ref.child("Client Post Requests").child(requestsearchdata[indexPath!.row].requestkey!).updateChildValues(status)
+
         
 
  }
