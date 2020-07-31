@@ -66,8 +66,12 @@
 		09F81EB52469CF5A00072B54 /* ClientHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F81EB42469CF5A00072B54 /* ClientHelp.swift */; };
 		09F81EB72469D20C00072B54 /* ClientFAQs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F81EB62469D20C00072B54 /* ClientFAQs.swift */; };
 		0BE917A282F2A750C15775B0 /* Pods_lawyers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C86BB4BA1A923D86165514 /* Pods_lawyers.framework */; };
+		1856A50424D41F2500810391 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856A50324D41F2500810391 /* ChatViewModel.swift */; };
 		185C0C492468064E0074F437 /* AddNewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C0C482468064E0074F437 /* AddNewController.swift */; };
 		185C0C4B2468582F0074F437 /* AddNewClientController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C0C4A2468582F0074F437 /* AddNewClientController.swift */; };
+		1873CB5E24D4169300DC70E0 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873CB5D24D4169300DC70E0 /* ChatViewController.swift */; };
+		1873CB6024D416DA00DC70E0 /* SenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873CB5F24D416DA00DC70E0 /* SenderTableViewCell.swift */; };
+		1873CB6224D4170C00DC70E0 /* ReceiverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873CB6124D4170C00DC70E0 /* ReceiverTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -131,8 +135,12 @@
 		09BC9479245D8D7500ECA565 /* ClientNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientNotifications.swift; sourceTree = "<group>"; };
 		09F81EB42469CF5A00072B54 /* ClientHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientHelp.swift; sourceTree = "<group>"; };
 		09F81EB62469D20C00072B54 /* ClientFAQs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientFAQs.swift; sourceTree = "<group>"; };
+		1856A50324D41F2500810391 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		185C0C482468064E0074F437 /* AddNewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewController.swift; sourceTree = "<group>"; };
 		185C0C4A2468582F0074F437 /* AddNewClientController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewClientController.swift; sourceTree = "<group>"; };
+		1873CB5D24D4169300DC70E0 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		1873CB5F24D416DA00DC70E0 /* SenderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderTableViewCell.swift; sourceTree = "<group>"; };
+		1873CB6124D4170C00DC70E0 /* ReceiverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverTableViewCell.swift; sourceTree = "<group>"; };
 		E6F78825309B7B3D3EC44135 /* Pods-lawyers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lawyers.debug.xcconfig"; path = "Target Support Files/Pods-lawyers/Pods-lawyers.debug.xcconfig"; sourceTree = "<group>"; };
 		ED36E0D75D7AFF936C05C279 /* Pods-lawyers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lawyers.release.xcconfig"; path = "Target Support Files/Pods-lawyers/Pods-lawyers.release.xcconfig"; sourceTree = "<group>"; };
 		F1C86BB4BA1A923D86165514 /* Pods_lawyers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lawyers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,6 +228,10 @@
 				0982B1A424D0400300317525 /* ManualCases.swift */,
 				0982B1A624D0404800317525 /* ManualCasesData.swift */,
 				0982B1A824D040D900317525 /* ManualCasesModel.swift */,
+				1873CB5D24D4169300DC70E0 /* ChatViewController.swift */,
+				1873CB5F24D416DA00DC70E0 /* SenderTableViewCell.swift */,
+				1873CB6124D4170C00DC70E0 /* ReceiverTableViewCell.swift */,
+				1856A50324D41F2500810391 /* ChatViewModel.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -418,6 +430,7 @@
 				0970AA1E246970B8000E4057 /* Lawyer FAQs.swift in Sources */,
 				095031AD246AD3A60065BF26 /* HearingDataModel.swift in Sources */,
 				0963CB64245DC15B00DEE057 /* LawyerDiary.swift in Sources */,
+				1873CB6224D4170C00DC70E0 /* ReceiverTableViewCell.swift in Sources */,
 				0982B1A324D017AF00317525 /* CompleteCasesModel.swift in Sources */,
 				185C0C4B2468582F0074F437 /* AddNewClientController.swift in Sources */,
 				090EA24424CDAE9A00325B36 /* RequestData.swift in Sources */,
@@ -442,12 +455,15 @@
 				185C0C492468064E0074F437 /* AddNewController.swift in Sources */,
 				093367F224CC29B00059F422 /* LawyerProfile.swift in Sources */,
 				09BC9476245D8D2A00ECA565 /* FindLawyer.swift in Sources */,
+				1873CB5E24D4169300DC70E0 /* ChatViewController.swift in Sources */,
 				09BC9460245D7DAD00ECA565 /* LawyerAddHearing.swift in Sources */,
 				093367EE24CB58C40059F422 /* Forget Password.swift in Sources */,
 				097BD8B8240863320094AAC1 /* Utilities.swift in Sources */,
 				090EA24024CDAB9B00325B36 /* ClientRequests.swift in Sources */,
+				1873CB6024D416DA00DC70E0 /* SenderTableViewCell.swift in Sources */,
 				0963CB6E246036E700DEE057 /* LawyerData.swift in Sources */,
 				097BD88C23FF18CF0094AAC1 /* SceneDelegate.swift in Sources */,
+				1856A50424D41F2500810391 /* ChatViewModel.swift in Sources */,
 				090EA23C24CC676200325B36 /* ClientUpdateProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,7 +540,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -578,7 +594,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -595,6 +611,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = lawyers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -602,7 +619,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gulzar.lawyers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -613,6 +630,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = lawyers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -620,7 +638,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gulzar.lawyers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

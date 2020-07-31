@@ -7,8 +7,9 @@
 //
 
 import UIKit
-protocol ShowCaseDelegate : class  {
-    func markcasedone(cell : CaseData)
+protocol CaseDataDelegate : class  {
+    //func markcasedone(cell : CaseData)
+    func sendMessage(cell : CaseData)
 }
 
 class CaseData: UITableViewCell {
@@ -20,7 +21,7 @@ class CaseData: UITableViewCell {
     @IBOutlet weak var casetype: UILabel!
     
     @IBOutlet weak var clientname: UILabel!
-    weak var delegate : ShowCaseDelegate!
+    weak var delegate : CaseDataDelegate!
     
     
 
@@ -36,11 +37,21 @@ class CaseData: UITableViewCell {
     
 
     @IBAction func actionMarkDone(_ sender: Any) {
-        if let del = self.delegate{
-                  del.markcasedone(cell: self)
-              }
+//        if let del = self.delegate{
+//                  del.markcasedone(cell: self)
+//              }
         
     }
+    @IBAction func actionSendMessage(_ sender: Any) {
+           if let del = self.delegate{
+                     del.sendMessage(cell: self)
+                 }
+           
+       }
+    
+    
+    
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

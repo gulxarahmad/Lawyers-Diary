@@ -63,6 +63,7 @@ class PostRequest: UIViewController, UITableViewDataSource, UITableViewDelegate 
                            let cdetails = caseDetail.text!.trimmingCharacters(in: .whitespacesAndNewlines)
                            let courtname = courtName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
                            
+                           
                            let type = ctype
 
                           // self.uploadprofileimage(self.profilepic.image!, em){url in

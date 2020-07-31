@@ -10,6 +10,7 @@ import UIKit
 
 class SenderTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lblMessage: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

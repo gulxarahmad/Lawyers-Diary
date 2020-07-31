@@ -10,6 +10,7 @@ import UIKit
 
 class ReceiverTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lblMessage: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

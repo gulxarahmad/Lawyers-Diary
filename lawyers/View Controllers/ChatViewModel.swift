@@ -1,9 +1,13 @@
-//
-//  ChatViewModel.swift
-//  lawyers
-//
-//  Created by apple on 7/31/20.
-//  Copyright © 2020 hst. All rights reserved.
-//
 
+import UIKit
 import Foundation
+class ChatViewModel{
+    var message: String?
+    var sender : String?
+    
+    init (message: String, sender: String){
+        self.message = message
+        self.sender = sender
+      
+    }
+}
