@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lFm-ay-Y3A">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lFm-ay-Y3A">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,25 +16,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="firstpage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="93W-kQ-fnq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8eE-6v-ckN">
                                 <rect key="frame" x="0.0" y="772" width="414" height="90"/>
                                 <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juA-EY-6oJ">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="juA-EY-6oJ">
                                         <rect key="frame" x="0.0" y="0.0" width="207" height="90"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <state key="normal" title="Are You Lawyer?">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Are You Lawyer?">
+                                                    <attributes>
+                                                        <color key="NSColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <font key="NSFont" size="24" name=".SFNS-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                         </state>
                                         <connections>
                                             <segue destination="UWS-Rf-7YU" kind="show" id="xb9-5G-7rw"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2l-7l-z1s">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S2l-7l-z1s">
                                         <rect key="frame" x="207" y="0.0" width="207" height="90"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                        <state key="normal" title="Are You Client?">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Are You Client?">
+                                                    <attributes>
+                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <font key="NSFont" metaFont="system" size="24"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                         </state>
                                         <connections>
                                             <segue destination="qbu-3M-Cpo" kind="show" id="Wzy-2T-lAI"/>
@@ -45,41 +61,20 @@
                                     <constraint firstAttribute="height" constant="90" id="RFW-I7-mhn"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Select Your Choice" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgM-eK-ey6">
-                                <rect key="frame" x="84.5" y="436" width="245" height="24"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo 1" translatesAutoresizingMaskIntoConstraints="NO" id="QfI-qC-dUn">
-                                <rect key="frame" x="87" y="178" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="B7V-ES-NVC"/>
-                                    <constraint firstAttribute="width" constant="240" id="koU-86-xwk"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lawyers Diary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0r-Nf-F6W">
-                                <rect key="frame" x="10" y="346" width="394" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="Ssz-p8-K8r"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please Select Your Choice" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgM-eK-ey6">
+                                <rect key="frame" x="30" y="535" width="355" height="222"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="QfI-qC-dUn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0ri-LR-DoJ"/>
                             <constraint firstItem="8eE-6v-ckN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EaG-iJ-Xvv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8eE-6v-ckN" secondAttribute="trailing" id="JL8-hU-v4W"/>
-                            <constraint firstItem="EgM-eK-ey6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JWp-6O-4MM"/>
+                            <constraint firstItem="EgM-eK-ey6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="198" id="JWp-6O-4MM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8eE-6v-ckN" secondAttribute="bottom" id="NB0-CU-sUS"/>
-                            <constraint firstItem="b0r-Nf-F6W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Nor-4S-bk3"/>
-                            <constraint firstItem="QfI-qC-dUn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="RLk-yG-wHM"/>
-                            <constraint firstItem="EgM-eK-ey6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UgH-HW-FrH"/>
-                            <constraint firstItem="b0r-Nf-F6W" firstAttribute="top" secondItem="QfI-qC-dUn" secondAttribute="bottom" constant="40" id="VT8-d2-hzt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b0r-Nf-F6W" secondAttribute="trailing" constant="10" id="lRb-hg-erq"/>
+                            <constraint firstItem="EgM-eK-ey6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="0.5" id="UgH-HW-FrH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -87,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1093" y="-76"/>
+            <point key="canvasLocation" x="1092.753623188406" y="-76.339285714285708"/>
         </scene>
         <!--Client Login-->
         <scene sceneID="q9D-bW-cJz">
@@ -563,10 +558,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TypeCell" id="oFT-b5-C3p">
-                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="240" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oFT-b5-C3p" id="oYG-8I-MhE">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -590,10 +585,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CityCell" id="7tq-Mw-frb">
-                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="240" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7tq-Mw-frb" id="30y-UZ-BeV">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -5583,6 +5578,9 @@
             <point key="canvasLocation" x="12991" y="-861"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="nDH-pu-ccN"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="desgn1" width="300" height="300"/>
         <image name="design 2" width="800" height="800"/>
@@ -5592,18 +5590,16 @@
         <image name="design 6" width="273" height="184"/>
         <image name="design 7" width="1024" height="1024"/>
         <image name="design 8" width="268" height="188"/>
-        <image name="envelope.fill" catalog="system" width="64" height="46"/>
-        <image name="line.horizontal.3" catalog="system" width="64" height="32"/>
-        <image name="lock.fill" catalog="system" width="64" height="64"/>
-        <image name="lock.slash.fill" catalog="system" width="58" height="64"/>
+        <image name="envelope.fill" catalog="system" width="128" height="93"/>
+        <image name="firstpage.jpg" width="2512" height="1670"/>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <image name="lock.fill" catalog="system" width="128" height="128"/>
+        <image name="lock.slash.fill" catalog="system" width="118" height="128"/>
         <image name="logo 1" width="300" height="300"/>
-        <image name="paperplane.fill" catalog="system" width="64" height="60"/>
-        <image name="person.circle.fill" catalog="system" width="64" height="60"/>
-        <image name="person.crop.circle.badge.plus" catalog="system" width="64" height="50"/>
-        <image name="person.fill" catalog="system" width="64" height="60"/>
-        <image name="phone.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="121"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.crop.circle.badge.plus" catalog="system" width="128" height="101"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="phone.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="nDH-pu-ccN"/>
-    </inferredMetricsTieBreakers>
 </document>
