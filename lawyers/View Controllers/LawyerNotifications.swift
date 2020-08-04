@@ -26,6 +26,7 @@ class LawyerNotifications: UIViewController {
     
 
     
+    @available(iOS 13.0, *)
     @IBAction func didTapAdd(){
         
         // show add vc

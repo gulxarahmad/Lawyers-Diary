@@ -30,9 +30,5 @@ class LawyerDiary: UIViewController {
         let cases = self.storyboard?.instantiateViewController(withIdentifier: "LCases") as! LawyerCases
         self.navigationController?.pushViewController(cases, animated: true)
     }
-    @IBAction func GoAddmyHearings(_ sender: Any) {
-        let hearing = self.storyboard?.instantiateViewController(withIdentifier: "LHearings") as! LawyerHearings
-        self.navigationController?.pushViewController(hearing, animated: true)
-    }
     
 }

@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 
 class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    var ref: DatabaseReference!
     
     @IBOutlet weak var todaybtn: UIButton!
     
@@ -36,7 +37,7 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
     }
     
     func showalldata(){
-        let ref: DatabaseReference!
+        
         ref = Database.database().reference()
         self.casesearchdata.removeAll()
         let userID = Auth.auth().currentUser?.uid
@@ -44,25 +45,33 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                                                         // Get user value
         let value = snapshot.value as? NSDictionary
         self.email = value?["email"] as? String ?? ""
-            ref.child("LawyerCases").queryOrderedByKey().observe(.value){ (snapshot) in
+            self.ref.child("Lawyer Cases").queryOrderedByKey().observe(.value){ (snapshot) in
             
             if let snapShot = snapshot.children.allObjects as? [DataSnapshot]{
                 for snap in snapShot{
-               
+                    let key = snap.key
                 if let maindata = snap.value as? [String: AnyObject]{
                                     
-                let cname = maindata["Client Name"] as? String
+                let cname = maindata["Case Title"] as? String
+                let clientname = maindata["Client Name"] as? String
+                let caseid = maindata["Case ID"] as? String
+                let clientid = maindata["Client ID"] as? String
                 let courtname = maindata["Court Name"] as? String
-                let mobile = maindata["Mobile Number"] as? String
-                let casetype = maindata["Case type"] as? String
+                let casetype = maindata["Case Type"] as? String
                 let lawyeremail = maindata ["Email"] as? String
-                if self.email == lawyeremail{
-                self.casesearchdata.append(CaseDataModel(cname: cname!, courtname: courtname!, casetype: casetype!, mobile: mobile!))
+                let det = maindata["Case Details"] as? String
+                let dateadd = maindata["Date of Add"] as? String
+                let status = maindata["Status"] as? String
+                let source = maindata["Source"] as? String
+                let postkey = maindata["Post Key"] as? String
+                    if self.email == lawyeremail && status == "inProgress" && source == "Request"{
+                        self.casesearchdata.append(CaseDataModel(cid: caseid!, cname: cname!, courtname: courtname!, casetype: casetype!, date: dateadd!, det:det!, source:source!, clientname: clientname!,skey:key, clientid: clientid!, postkey: postkey!))
                    }
-                  self.CaseDataTable.reloadData()
+                  
                 }
                                       
                 }
+                self.CaseDataTable.reloadData()
             }
         }
    })
@@ -73,7 +82,6 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                //  formatter.dateStyle = .MM/dd/yyyy
             formatter.dateFormat = "M/d/yyyy"
             let datestring = formatter.string(from: currentdate)
-            let ref: DatabaseReference!
             ref = Database.database().reference()
             self.casesearchdata.removeAll()
             let userID = Auth.auth().currentUser?.uid
@@ -81,30 +89,41 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                                                             // Get user value
             let value = snapshot.value as? NSDictionary
             self.email = value?["email"] as? String ?? ""
-                ref.child("LawyerCases").queryOrderedByKey().observe(.value){ (snapshot) in
+                self.ref.child("Lawyer Cases").queryOrderedByKey().observe(.value){ (snapshot) in
                 
                 if let snapShot = snapshot.children.allObjects as? [DataSnapshot]{
                     for snap in snapShot{
+                    let key = snap.key
                    
                     if let maindata = snap.value as? [String: AnyObject]{
                                         
-                    let cname = maindata["Client Name"] as? String
+                    let cname = maindata["Case Title"] as? String
+                    let caseid = maindata["Case ID"] as? String
+                    let clientid = maindata["Client ID"] as? String
+                    let clientname = maindata["Client Name"] as? String
                     let courtname = maindata["Court Name"] as? String
-                    let mobile = maindata["Mobile Number"] as? String
-                    let casetype = maindata["Case type"] as? String
+                    let casetype = maindata["Case Type"] as? String
                     let lawyeremail = maindata ["Email"] as? String
+                    let det = maindata["Case Details"] as? String
                     let dateadd = maindata["Date of Add"] as? String
+                    let status = maindata["Status"] as? String
+                    let source = maindata["Source"] as? String
+                    let postkey = maindata["Case ID"] as? String
                         
+                     print(datestring)
+                     print(dateadd!)
                         
-                    if self.email == lawyeremail && datestring == dateadd{
-                    self.casesearchdata.append(CaseDataModel(cname: cname!, courtname: courtname!, casetype: casetype!, mobile: mobile!))
+                    if self.email == lawyeremail && datestring == dateadd && status == "inProgress" && source == "Request"{
+                        self.casesearchdata.append(CaseDataModel(cid: caseid!, cname: cname!, courtname: courtname!, casetype: casetype!, date: dateadd!, det: det!,source:source!, clientname: clientname!,skey:key, clientid: clientid!, postkey: postkey!))
 
                        }
-                     self.CaseDataTable.reloadData()
+                     
                     }
                                           
                     }
+                    
                 }
+                    self.CaseDataTable.reloadData()
             }
        })
     }
@@ -122,8 +141,6 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
             let currentdaystr = formatter.string(from: currentdate)
             print(currentdaystr)
             let currentday = formatter.date(from: currentdaystr)
-           // print ("This is today" + currentdaystr)
-            let ref: DatabaseReference!
             ref = Database.database().reference()
             self.casesearchdata.removeAll()
             let userID = Auth.auth().currentUser?.uid
@@ -131,19 +148,26 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                                                             // Get user value
             let value = snapshot.value as? NSDictionary
             self.email = value?["email"] as? String ?? ""
-                ref.child("LawyerCases").queryOrderedByKey().observe(.value){ (snapshot) in
+                self.ref.child("Lawyer Cases").queryOrderedByKey().observe(.value){ (snapshot) in
                 
                 if let snapShot = snapshot.children.allObjects as? [DataSnapshot]{
                     for snap in snapShot{
+                        let key = snap.key
                    
                     if let maindata = snap.value as? [String: AnyObject]{
                                         
-                    let cname = maindata["Client Name"] as? String
+                    let cname = maindata["Case Title"] as? String
+                    let caseid = maindata["Case ID"] as? String
+                    let clientid = maindata["Client ID"] as? String
+                     let clientname = maindata["Client Name"] as? String
                     let courtname = maindata["Court Name"] as? String
-                    let mobile = maindata["Mobile Number"] as? String
-                    let casetype = maindata["Case type"] as? String
+                    let casetype = maindata["Case Type"] as? String
                     let lawyeremail = maindata ["Email"] as? String
+                    let det = maindata["Case Details"] as? String
                     let dateadd = maindata["Date of Add"] as? String
+                        let status = maindata["Status"] as? String
+                        let source = maindata["Source"] as? String
+                        let postkey = maindata["Case ID"] as? String
                     let formatter = DateFormatter()
                     formatter.dateFormat = "M/d/yyyy"
                     let stodate = formatter.date(from: dateadd!)
@@ -158,18 +182,20 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
                     //    print(fetchdate)
                  //   let fetchdatetoint: Int? = Int(fetchdate)
                   //  print(fetchdatetoint)
-                        if self.email == lawyeremail{
+                        if self.email == lawyeremail && status == "inProgress" && source == "Request"{
                             if (fetchrecorddate?.compare(monthofdate!) == .orderedSame && ( fetchrecordday?.compare(currentday!) == .orderedAscending || fetchrecordday?.compare(currentday!) == .orderedSame)) || (fetchrecorddate?.compare(stringtodate!) == .orderedSame && fetchrecordday?.compare(currentday!) == .orderedDescending) {
-                    self.casesearchdata.append(CaseDataModel(cname: cname!, courtname: courtname!, casetype: casetype!, mobile: mobile!))
+                                self.casesearchdata.append(CaseDataModel(cid: caseid!, cname: cname!, courtname: courtname!, casetype: casetype!, date: dateadd!,  det: det!,source:source!, clientname: clientname!,skey:key, clientid: clientid!, postkey: postkey!))
                 
                             }
 
                        }
-                     self.CaseDataTable.reloadData()
+                     
                     }
                                           
                     }
+                    
                 }
+               self.CaseDataTable.reloadData()
             }
        })
     }
@@ -181,15 +207,28 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CaseData", for: indexPath) as! CaseData
+        cell.delegate = self
         cell.datashow = casesearchdata[indexPath.row]
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detail:ShowCaseData = self.storyboard?.instantiateViewController(withIdentifier: "CaseDetails") as! ShowCaseData
+        self.navigationController?.pushViewController(detail, animated:true)
+        
+        detail.client = casesearchdata[indexPath.row].cname!
+        detail.contact = casesearchdata[indexPath.row].clientname
+        detail.CaseID = casesearchdata[indexPath.row].cid!
+        detail.det = casesearchdata[indexPath.row].details!
+        detail.court = casesearchdata[indexPath.row].courtname!
+        detail.type = casesearchdata[indexPath.row].casetype!
+        
+    }
 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    
-        return 200
+        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+            return 200
 
-}
+    }
     @IBAction func todaycases(_ sender: Any) {
         todaybtn.backgroundColor = UIColor.black
         todaybtn.setTitleColor(UIColor.white, for: .normal)
@@ -224,4 +263,12 @@ class LawyerCases: UIViewController, UITableViewDataSource, UITableViewDelegate 
        
 
 
+}
+extension LawyerCases: CaseDataDelegate{
+    func sendMessage(cell: CaseData) {
+        let index = self.CaseDataTable.indexPath(for: cell)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
+        vc.otherUserId = self.casesearchdata[index!.row].clientid!
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class LawyerAddCase: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class LawyerAddCase: UIViewController, UITableViewDelegate, UITableViewDataSource  , UITextFieldDelegate{
 
    
     var type = ["Personal Injury", "Estate Planning", "Bankruptcy", "Intellectual Property", "Employment", "Corporate", "Immigration", "Crime"]
@@ -27,14 +27,24 @@ class LawyerAddCase: UIViewController, UITableViewDelegate, UITableViewDataSourc
     var email: String!
 
     @IBOutlet weak var caseTypetbl: UITableView!
-    @IBOutlet weak var errorlabel: UILabel!
+    //@IBOutlet weak var errorlabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         caseTypetbl.isHidden = true
+        self.number.delegate = self
+          self.cname.delegate = self
 
         // Do any additional setup after loading the view.
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.cname.becomeFirstResponder()
+        self.cname.text?.removeAll()
+         self.courname.text?.removeAll()
+         self.number.text?.removeAll()
+         self.details.text?.removeAll()
+        self.number.resignFirstResponder()
+        
+    }
     @IBAction func choosetype(_ sender: Any) {
         if caseTypetbl.isHidden{
             UIView.animate(withDuration: 0.3){
@@ -79,13 +89,13 @@ class LawyerAddCase: UIViewController, UITableViewDelegate, UITableViewDataSourc
                                             // Get user value
                     let value = snapshot.value as? NSDictionary
                     self.email = value?["email"] as? String ?? ""
-                        let ldata = ["Client Name": name, "Details":cdetails, "Court Name": courtname, "Mobile Number":mobile, "Case type":type, "Email": self.email, "Date of Add":datestring] as [String: Any]
+                    let cid = UUID().uuidString
+                    print (cid)
+                        let ldata = ["Case ID":cid,"Case Title": name, "Case Details":cdetails, "Court Name": courtname, "Case Type":type,"Client Name":mobile, "Email": self.email, "Date of Add":datestring, "Date of Done":"nil", "Post Key":"nil", "Source":"Manual", "Status":"inProgress"] as [String: Any]
                     let databaseRef = Database.database().reference()
-                    databaseRef.child("LawyerCases").childByAutoId().setValue(ldata)
+                    databaseRef.child("Lawyer Cases").childByAutoId().setValue(ldata)
                      
                         
-                    let lcase = self.storyboard?.instantiateViewController(withIdentifier: "LCases") as! LawyerCases
-                    self.navigationController?.pushViewController(lcase, animated: true)
                     self.showmessage("The Case has added succesfully!")
                        
                     })
