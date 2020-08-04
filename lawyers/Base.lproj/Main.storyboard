@@ -30,7 +30,7 @@
                                                 <fragment content="Are You Lawyer?">
                                                     <attributes>
                                                         <color key="NSColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                        <font key="NSFont" size="24" name=".SFNS-Regular"/>
+                                                        <font key="NSFont" metaFont="system" size="24"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
