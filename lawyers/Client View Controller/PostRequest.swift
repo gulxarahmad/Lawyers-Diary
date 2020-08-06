@@ -22,6 +22,7 @@ class PostRequest: UIViewController, UITableViewDataSource, UITableViewDelegate 
     var city: String!
     var clientid: String!
     var clientname: String!
+    var lawyerid: String! = "nil"
     
     
     override func viewDidLoad() {
@@ -79,7 +80,7 @@ class PostRequest: UIViewController, UITableViewDataSource, UITableViewDelegate 
                             self.clientname = value?["firstname"] as? String ?? ""
                            let postid = UUID().uuidString
                            print (postid)
-                            let ldata = ["Client ID": self.clientid,"Client Name": self.clientname,"Post ID":postid,"Case Title": ctitle, "Details":cdetails, "Court Name": courtname, "Case type":type, "Email": self.email, "Date of Add":datestring, "City": self.city, "Status":"Pending", "Lawyer ID":"nil", "Case ID": "nil"] as [String: Any]
+                            let ldata = ["Client ID": self.clientid,"Client Name": self.clientname,"Post ID":postid,"Case Title": ctitle, "Details":cdetails, "Court Name": courtname, "Case type":type, "Email": self.email, "Date of Add":datestring, "City": self.city, "Status":"Pending", "Lawyer ID":self.lawyerid, "Case ID": "nil"] as [String: Any]
                            let databaseRef = Database.database().reference()
                            databaseRef.child("Client Post Requests").childByAutoId().setValue(ldata)
                             

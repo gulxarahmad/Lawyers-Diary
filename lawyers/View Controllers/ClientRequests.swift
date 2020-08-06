@@ -10,9 +10,8 @@ import UIKit
 import Firebase
 class ClientRequests: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var ref: DatabaseReference!
-    @IBOutlet weak var todaybtn: UIButton!
-    @IBOutlet weak var monthbtn: UIButton!
-    @IBOutlet weak var allbtn: UIButton!
+    @IBOutlet weak var forMebtn: UIButton!
+    @IBOutlet weak var forAllbtn: UIButton!
     
     @IBOutlet weak var RequestDataTable: UITableView!
     var requestsearchdata = [RequestDataModel]()
@@ -23,12 +22,11 @@ class ClientRequests: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         self.RequestDataTable.reloadData()
-/*        allbtn.backgroundColor = UIColor.black
-        allbtn.setTitleColor(UIColor.white, for: .normal)
-        monthbtn.backgroundColor = UIColor.white
-        monthbtn.setTitleColor(UIColor.black, for: .normal)
-        todaybtn.backgroundColor = UIColor.white
-        todaybtn.setTitleColor(UIColor.black, for: .normal)*/
+        forAllbtn.backgroundColor = UIColor.black
+        forAllbtn.setTitleColor(UIColor.white, for: .normal)
+        forMebtn.backgroundColor = UIColor.white
+        forMebtn.setTitleColor(UIColor.black, for: .normal)
+
         showalldata()
         // Do any additional setup after loading the view.
     }
@@ -39,6 +37,7 @@ class ClientRequests: UIViewController, UITableViewDataSource, UITableViewDelega
             ref = Database.database().reference()
             self.requestsearchdata.removeAll()
        // self.RequestDataTable.reloadData()
+        
 
         ref.child("Client Post Requests").queryOrderedByKey().observeSingleEvent(of: .value){ (snapshot) in
               //  self.requestsearchdata.removeAll()
@@ -58,8 +57,9 @@ class ClientRequests: UIViewController, UITableViewDataSource, UITableViewDelega
                     let status = maindata["Status"] as? String
                      let date = maindata["Date of Add"] as? String
                      let clientid = maindata["Client ID"] as? String
+                     let lawyerid = maindata["Lawyer ID"] as? String
                         
-                        if status == "Pending"{
+                        if status == "Pending" && lawyerid == "nil" {
                             self.requestsearchdata.append(RequestDataModel(requestkey: key, postid: postid!, casetitle: ctitle!, courtname: courtname!, casetype: casetype!, city: city!, details: det!, date: date!,clientname:clientname!, clientid: clientid!))
  
                       
@@ -70,6 +70,50 @@ class ClientRequests: UIViewController, UITableViewDataSource, UITableViewDelega
                 }
                     self.RequestDataTable.reloadData()
             }
+    }
+    func forMeRequests(){
+                   ref = Database.database().reference()
+                   self.requestsearchdata.removeAll()
+              // self.RequestDataTable.reloadData()
+         let userID = Auth.auth().currentUser?.uid
+        ref.child("Lawyer").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+                                                   // Get user value
+        let value = snapshot.value as? NSDictionary
+        self.lawyerid = value?["ID"] as? String ?? ""
+
+            self.ref.child("Client Post Requests").queryOrderedByKey().observeSingleEvent(of: .value){ (snapshot) in
+                     //  self.requestsearchdata.removeAll()
+                       if let snapShot = snapshot.children.allObjects as? [DataSnapshot]{
+                           for snap in snapShot{
+                               let key = snap.key
+                          
+                           if let maindata = snap.value as? [String: AnyObject]{
+                                               
+                           let ctitle = maindata["Case Title"] as? String
+                           let clientname = maindata["Client Name"] as? String
+                           let postid = maindata["Post ID"] as? String
+                           let courtname = maindata["Court Name"] as? String
+                           let city = maindata["City"] as? String
+                           let casetype = maindata["Case type"] as? String
+                           let det = maindata["Details"] as? String
+                           let status = maindata["Status"] as? String
+                            let date = maindata["Date of Add"] as? String
+                            let clientid = maindata["Client ID"] as? String
+                            let lawyerid = maindata["Lawyer ID"] as? String
+                               
+                            if status == "Pending" && lawyerid == self.lawyerid {
+                                   self.requestsearchdata.append(RequestDataModel(requestkey: key, postid: postid!, casetitle: ctitle!, courtname: courtname!, casetype: casetype!, city: city!, details: det!, date: date!,clientname:clientname!, clientid: clientid!))
+        
+                             
+                               }
+                           }
+                                                 
+                           }
+                       }
+                           self.RequestDataTable.reloadData()
+                   }
+            })
+        
     }
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return requestsearchdata.count
@@ -86,6 +130,22 @@ class ClientRequests: UIViewController, UITableViewDataSource, UITableViewDelega
         
             return 200
 
+    }
+    @IBAction func ForMeCases(_ sender: Any) {
+        forMebtn.backgroundColor = UIColor.black
+        forMebtn.setTitleColor(UIColor.white, for: .normal)
+        forAllbtn.backgroundColor = UIColor.white
+        forAllbtn.setTitleColor(UIColor.black, for: .normal)
+        forMeRequests()
+    }
+    
+    @IBAction func ForAllCases(_ sender: Any) {
+        
+        forAllbtn.backgroundColor = UIColor.black
+        forAllbtn.setTitleColor(UIColor.white, for: .normal)
+        forMebtn.backgroundColor = UIColor.white
+        forMebtn.setTitleColor(UIColor.black, for: .normal)
+        showalldata()
     }
 }
 //MARK:- ACCEPT CASE REQUEST DELEAGATE METHODS.
