@@ -537,17 +537,22 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7e4-Fa-J89">
-                                <rect key="frame" x="196" y="214" width="48" height="30"/>
+                                <rect key="frame" x="163" y="157" width="108" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Search"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <state key="normal" title="Search 🔍">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="searchbtn:" destination="F5d-Oj-Bjl" eventType="touchUpInside" id="ghn-mu-grp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gl-Lk-erQ">
-                                <rect key="frame" x="360" y="64" width="34" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="City"/>
+                                <rect key="frame" x="301" y="64" width="68" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <state key="normal" title="City ▼">
+                                    <color key="titleColor" red="0.0290490165" green="0.0290490165" blue="0.0290490165" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="choosecity:" destination="F5d-Oj-Bjl" eventType="touchUpInside" id="8QT-2O-yyZ"/>
                                 </connections>
@@ -571,16 +576,8 @@
                                     <outlet property="delegate" destination="F5d-Oj-Bjl" id="RBG-Rd-yai"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lf9-Ab-J8S">
-                                <rect key="frame" x="20" y="64" width="42" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Type"/>
-                                <connections>
-                                    <action selector="choosetype:" destination="F5d-Oj-Bjl" eventType="touchUpInside" id="Oem-gd-mqC"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ch1-Ee-Fcz">
-                                <rect key="frame" x="174" y="116" width="240" height="128"/>
+                                <rect key="frame" x="279" y="142" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -598,16 +595,26 @@
                                     <outlet property="delegate" destination="F5d-Oj-Bjl" id="GW8-HU-bbU"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lf9-Ab-J8S">
+                                <rect key="frame" x="53" y="63" width="81" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <state key="normal" title="Type  ▼">
+                                    <color key="titleColor" red="0.0290490165" green="0.0290490165" blue="0.0290490165" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="choosetype:" destination="F5d-Oj-Bjl" eventType="touchUpInside" id="Oem-gd-mqC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Yoz-pB-2XH" firstAttribute="top" secondItem="8Tr-UQ-gh6" secondAttribute="top" constant="200" id="1nZ-Cf-K8o"/>
                             <constraint firstItem="Yoz-pB-2XH" firstAttribute="leading" secondItem="Ylm-We-lXB" secondAttribute="leadingMargin" id="20H-XA-hcQ"/>
                             <constraint firstItem="0gl-Lk-erQ" firstAttribute="top" secondItem="8Tr-UQ-gh6" secondAttribute="top" constant="20" id="IPw-9f-cBD"/>
-                            <constraint firstItem="8Tr-UQ-gh6" firstAttribute="trailing" secondItem="0gl-Lk-erQ" secondAttribute="trailing" constant="20" id="Lys-TZ-dlF"/>
+                            <constraint firstItem="8Tr-UQ-gh6" firstAttribute="trailing" secondItem="0gl-Lk-erQ" secondAttribute="trailing" constant="45" id="Lys-TZ-dlF"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Yoz-pB-2XH" secondAttribute="bottom" constant="-34" id="Yk1-Wi-NAg"/>
-                            <constraint firstItem="lf9-Ab-J8S" firstAttribute="leading" secondItem="8Tr-UQ-gh6" secondAttribute="leading" constant="20" id="bho-do-7h7"/>
-                            <constraint firstItem="lf9-Ab-J8S" firstAttribute="top" secondItem="8Tr-UQ-gh6" secondAttribute="top" constant="20" id="dp6-BT-VG9"/>
+                            <constraint firstItem="lf9-Ab-J8S" firstAttribute="leading" secondItem="8Tr-UQ-gh6" secondAttribute="leading" constant="53" id="bho-do-7h7"/>
+                            <constraint firstItem="lf9-Ab-J8S" firstAttribute="top" secondItem="8Tr-UQ-gh6" secondAttribute="top" constant="19" id="dp6-BT-VG9"/>
                             <constraint firstItem="Yoz-pB-2XH" firstAttribute="trailing" secondItem="Ylm-We-lXB" secondAttribute="trailingMargin" id="fUP-ac-0Dm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Tr-UQ-gh6"/>
@@ -977,10 +984,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="firstpage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ORr-IG-RbW">
+                                <rect key="frame" x="0.0" y="88" width="316" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKd-q2-kxY">
                                 <rect key="frame" x="21" y="168" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Profile"/>
+                                <state key="normal" title="Profile">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="BDM-il-AVc" kind="show" id="hnR-zx-JBK"/>
                                 </connections>
@@ -988,7 +1001,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frV-Ug-BHu">
                                 <rect key="frame" x="27" y="261" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Help"/>
+                                <state key="normal" title="Help">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="gEY-hf-tja" kind="show" id="lCB-tB-xsg"/>
                                 </connections>
@@ -996,7 +1011,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6c-u5-pTN">
                                 <rect key="frame" x="25" y="365" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="FAQs"/>
+                                <state key="normal" title="FAQs">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="8PL-8T-mZm" kind="show" id="Zo3-rG-D5Q"/>
                                 </connections>
@@ -1004,7 +1021,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7s3-nu-jcv">
                                 <rect key="frame" x="16" y="476" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Log Out"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
                                 <connections>
                                     <action selector="LogOut:" destination="twJ-is-osj" eventType="touchUpInside" id="fb0-vr-P0L"/>
                                 </connections>
@@ -1918,10 +1937,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="firstpage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="GdA-Zc-eh7">
+                                <rect key="frame" x="0.0" y="88" width="297" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bej-4g-o9a">
                                 <rect key="frame" x="20" y="155" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Profile"/>
+                                <state key="normal" title="Profile">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="WNI-dO-WWs" kind="show" id="32Q-uZ-Xo4"/>
                                 </connections>
@@ -1929,23 +1954,29 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRC-va-MkT">
                                 <rect key="frame" x="20" y="366" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Logout"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
                                 <connections>
                                     <action selector="Logout:" destination="lki-Gx-nkw" eventType="touchUpInside" id="t91-2P-h3m"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hK8-PY-05O">
-                                <rect key="frame" x="20" y="250" width="32" height="30"/>
+                                <rect key="frame" x="27" y="228" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Help"/>
+                                <state key="normal" title="Help">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="gYl-UG-xX3" kind="show" id="YIw-jJ-TK3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nur-oG-tt6">
-                                <rect key="frame" x="27" y="311" width="37" height="30"/>
+                                <rect key="frame" x="27" y="300" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="FAQs"/>
+                                <state key="normal" title="FAQs">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="pYu-QG-gtY" kind="show" id="HiQ-U0-RF5"/>
                                 </connections>
@@ -3783,8 +3814,9 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo 1" translatesAutoresizingMaskIntoConstraints="NO" id="Yw3-1r-Ev9">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo4" translatesAutoresizingMaskIntoConstraints="NO" id="Yw3-1r-Ev9">
                                         <rect key="frame" x="140" y="132" width="134" height="130"/>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="130" id="Hos-g0-sKi"/>
                                         </constraints>
@@ -5596,6 +5628,7 @@
         <image name="lock.fill" catalog="system" width="128" height="128"/>
         <image name="lock.slash.fill" catalog="system" width="118" height="128"/>
         <image name="logo 1" width="300" height="300"/>
+        <image name="logo4" width="512" height="512"/>
         <image name="paperplane.fill" catalog="system" width="128" height="121"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.crop.circle.badge.plus" catalog="system" width="128" height="101"/>
