@@ -14,6 +14,17 @@ import UserNotifications
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // navigation top bar color
+        UINavigationBar.appearance().barTintColor = UIColor.black
+         // navigation back  color
+        UINavigationBar.appearance().tintColor = UIColor.white
+         // navigation top title color
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        //staus bar(time,wifi)
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        
+        
         // Override point for customization after application launch.
        FirebaseApp.configure()
         //if Auth.auth().currentUser == nil{

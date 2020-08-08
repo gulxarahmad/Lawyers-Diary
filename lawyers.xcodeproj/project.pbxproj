@@ -72,6 +72,8 @@
 		1873CB5E24D4169300DC70E0 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873CB5D24D4169300DC70E0 /* ChatViewController.swift */; };
 		1873CB6024D416DA00DC70E0 /* SenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873CB5F24D416DA00DC70E0 /* SenderTableViewCell.swift */; };
 		1873CB6224D4170C00DC70E0 /* ReceiverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873CB6124D4170C00DC70E0 /* ReceiverTableViewCell.swift */; };
+		9283CB4324DDE4F700C1B854 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9283CB4224DDE4F700C1B854 /* logo.png */; };
+		92BB81F424D98DE700F9C4E9 /* firstpage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92BB81F324D98DE700F9C4E9 /* firstpage.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,6 +143,8 @@
 		1873CB5D24D4169300DC70E0 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		1873CB5F24D416DA00DC70E0 /* SenderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderTableViewCell.swift; sourceTree = "<group>"; };
 		1873CB6124D4170C00DC70E0 /* ReceiverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverTableViewCell.swift; sourceTree = "<group>"; };
+		9283CB4224DDE4F700C1B854 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		92BB81F324D98DE700F9C4E9 /* firstpage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = firstpage.jpg; sourceTree = "<group>"; };
 		E6F78825309B7B3D3EC44135 /* Pods-lawyers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lawyers.debug.xcconfig"; path = "Target Support Files/Pods-lawyers/Pods-lawyers.debug.xcconfig"; sourceTree = "<group>"; };
 		ED36E0D75D7AFF936C05C279 /* Pods-lawyers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lawyers.release.xcconfig"; path = "Target Support Files/Pods-lawyers/Pods-lawyers.release.xcconfig"; sourceTree = "<group>"; };
 		F1C86BB4BA1A923D86165514 /* Pods_lawyers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lawyers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,6 +243,7 @@
 		097BD8B62408611D0094AAC1 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				92BB81F224D98DB100F9C4E9 /* RizAssets */,
 				097BD8B424085F570094AAC1 /* Constants.swift */,
 				097BD8B7240863320094AAC1 /* Utilities.swift */,
 			);
@@ -287,6 +292,15 @@
 				F1C86BB4BA1A923D86165514 /* Pods_lawyers.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		92BB81F224D98DB100F9C4E9 /* RizAssets */ = {
+			isa = PBXGroup;
+			children = (
+				92BB81F324D98DE700F9C4E9 /* firstpage.jpg */,
+				9283CB4224DDE4F700C1B854 /* logo.png */,
+			);
+			path = RizAssets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,7 +363,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92BB81F424D98DE700F9C4E9 /* firstpage.jpg in Resources */,
 				097BD89623FF18D60094AAC1 /* LaunchScreen.storyboard in Resources */,
+				9283CB4324DDE4F700C1B854 /* logo.png in Resources */,
 				097BD8AC2401502B0094AAC1 /* GoogleService-Info.plist in Resources */,
 				097BD89323FF18D60094AAC1 /* Assets.xcassets in Resources */,
 				097BD89123FF18CF0094AAC1 /* Main.storyboard in Resources */,
