@@ -628,12 +628,7 @@
                             <constraint firstItem="Yoz-pB-2XH" firstAttribute="top" secondItem="8Tr-UQ-gh6" secondAttribute="top" constant="234" id="1nZ-Cf-K8o"/>
                             <constraint firstItem="Yoz-pB-2XH" firstAttribute="leading" secondItem="Ylm-We-lXB" secondAttribute="leadingMargin" id="20H-XA-hcQ"/>
                             <constraint firstItem="0gl-Lk-erQ" firstAttribute="top" secondItem="8Tr-UQ-gh6" secondAttribute="top" constant="20" id="IPw-9f-cBD"/>
-<<<<<<< HEAD
-                            <constraint firstItem="8Tr-UQ-gh6" firstAttribute="trailing" secondItem="0gl-Lk-erQ" secondAttribute="trailing" constant="20" id="Lys-TZ-dlF"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Yoz-pB-2XH" secondAttribute="bottom" constant="-154" id="Yk1-Wi-NAg"/>
-                            <constraint firstItem="lf9-Ab-J8S" firstAttribute="leading" secondItem="8Tr-UQ-gh6" secondAttribute="leading" constant="20" id="bho-do-7h7"/>
-                            <constraint firstItem="lf9-Ab-J8S" firstAttribute="top" secondItem="8Tr-UQ-gh6" secondAttribute="top" constant="20" id="dp6-BT-VG9"/>
-=======
+
                             <constraint firstItem="8Tr-UQ-gh6" firstAttribute="trailing" secondItem="0gl-Lk-erQ" secondAttribute="trailing" constant="45" id="Lys-TZ-dlF"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Yoz-pB-2XH" secondAttribute="bottom" constant="-34" id="Yk1-Wi-NAg"/>
                             <constraint firstItem="lf9-Ab-J8S" firstAttribute="leading" secondItem="8Tr-UQ-gh6" secondAttribute="leading" constant="53" id="bho-do-7h7"/>
