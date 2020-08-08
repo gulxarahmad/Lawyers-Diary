@@ -13,10 +13,13 @@ class FindLawyerModel{
     var lname: String?
     var spec: String?
     var city: String?
-    init (fname: String, lname: String, spec: String, city: String){
+    var lawyerid: String?
+    init (fname: String, lname: String, spec: String, city: String, lawyerid: String){
         self.fname = fname
         self.lname = lname
         self.spec = spec
         self.city = city
+        self.lawyerid = lawyerid
     }
+    
 }

@@ -16,8 +16,11 @@ class LawyerAddHearing: UIViewController {
     @IBOutlet weak var agenda: UITextField!
     
     @IBOutlet weak var date: UIDatePicker!
+    var setcname:String!
+    var CaseID: String!
     override func viewDidLoad() {
         super.viewDidLoad()
+        cname.text = setcname
 
         // Do any additional setup after loading the view.
     }
@@ -63,14 +66,13 @@ class LawyerAddHearing: UIViewController {
                                     // Get user value
             let value = snapshot.value as? NSDictionary
             let email = value?["email"] as? String ?? ""
-            let ldata = ["Client Name": name, "Agenda":agend, "Hearing Date": hearingdate, "Email": email] as [String: Any]
+                let hid = UUID().uuidString
+                let ldata = ["Hearing ID":hid,"Case ID": self.CaseID,"Case Title": name, "Agenda":agend, "Hearing Date": hearingdate, "Email": email] as [String: Any]
             let databaseRef = Database.database().reference()
             databaseRef.child("Hearings").childByAutoId().setValue(ldata)
              
                 
-            //let lcase = self.storyboard?.instantiateViewController(withIdentifier: "LCases") as! LawyerCases
-         //   self.navigationController?.pushViewController(lcase, animated: true)
-            self.showmessage("The Hearing has added succesfully!")
+                self.showmessage("Your Hearings has added")
                
             })
             {

@@ -28,12 +28,13 @@ class Client_Sign_Up: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var lasttname: UITextField! = nil
     @IBOutlet weak var email: UITextField! = nil
+    @IBOutlet weak var mobile: UITextField! = nil
     
     @IBOutlet weak var password: UITextField! = nil
     
     @IBOutlet weak var cpassword: UITextField! = nil
    
-    @IBOutlet weak var errorlabel: UILabel!
+   // @IBOutlet weak var errorlabel: UILabel!
     
     @IBOutlet weak var gendertbl: UITableView!
     
@@ -58,7 +59,8 @@ class Client_Sign_Up: UIViewController, UITableViewDelegate, UITableViewDataSour
     */
     func validatefields() -> String? {
            
-        if firstname.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || lasttname.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || email.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || password.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || cpassword.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || gend == "" || cit == ""
+        if firstname.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || lasttname.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || email.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            mobile.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || password.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || cpassword.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || gend == "" || cit == ""
               
            {
                return "Please Fill all Fields"
@@ -77,6 +79,11 @@ class Client_Sign_Up: UIViewController, UITableViewDelegate, UITableViewDataSour
            {
                return "Email Format is Invalid"
            }
+        let vmobile=mobile.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if Utilities.isValidPhone(vmobile) == false
+        {
+            return "Phone Format is Invalid"
+        }
            return nil
        }
 
@@ -93,17 +100,18 @@ class Client_Sign_Up: UIViewController, UITableViewDelegate, UITableViewDataSour
                     let psw = password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
                     let fname = firstname.text!.trimmingCharacters(in: .whitespacesAndNewlines)
                     let lname = lasttname.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+                    let mbl = mobile.text!.trimmingCharacters(in: .whitespacesAndNewlines)
                     
                    let cities = cit
                     let genders = gend
   
                     
                  //   self.uploadprofileimage(self.profilepic.image!, em){url in
-                    let ldata = ["email" : em, "firstname" : fname,"lastname" : lname,"password" : psw, "User Type":"Client", "Gender":genders, "City": cities]
+
                     
                     
                     Auth.auth().createUser(withEmail: em, password: psw) { (result, err) in
-                    
+                    let ldata = ["ID": result!.user.uid,"Mobile": mbl,"email" : em, "firstname" : fname,"lastname" : lname,"password" : psw, "User Type":"Client", "Gender":genders, "City": cities]
                     // Check for errors
                     if err != nil {
                         
@@ -123,8 +131,13 @@ class Client_Sign_Up: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     func showerror(_ errmessage:String)
     {
-        errorlabel.text=errmessage
-        errorlabel.alpha=1
+        let alertController = UIAlertController(title: "Message", message: errmessage , preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "Close Alert", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        present(alertController, animated: true, completion: nil)
+        //errorlabel.text=errmessage
+       // errorlabel.alpha=1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var num = 1

@@ -7,33 +7,81 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8752319A-DE20-474A-B672-114B70C2DF79"
-            shouldBeEnabled = "Yes"
+            uuid = "CC773003-710C-4A6B-B637-B1CA88BD9500"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../../../Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIResponder.h"
+            filePath = "lawyers/View Controllers/ClientRequests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "showalldata()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CC773003-710C-4A6B-B637-B1CA88BD9500 - f4c952426bada0f7"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "lawyers.ClientRequests.showalldata() -&gt; ()"
+                  moduleName = "lawyers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hst/Documents/Lawyers-Diary/lawyers/View%20Controllers/ClientRequests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "308">
+               </Location>
+               <Location
+                  uuid = "CC773003-710C-4A6B-B637-B1CA88BD9500 - cdf893c20abcafc"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in lawyers.ClientRequests.showalldata() -&gt; ()"
+                  moduleName = "lawyers"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hst/Documents/Lawyers-Diary/lawyers/View%20Controllers/ClientRequests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "478">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "44F9B7A1-AD7F-40DF-9141-EA1CF57ADDCD"
+            uuid = "EBD5137D-372D-485C-A294-4E2A1207668D"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "lawyers/View controllers/LawyerCases.swift"
+            filePath = "lawyers/View Controllers/ClientRequests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "forMeRequests()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "315F12A8-5D53-44C8-95AF-1158F04BADD9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "lawyers/View Controllers/HearingData.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "datashow"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

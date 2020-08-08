@@ -7,6 +7,10 @@
 //
 
 import UIKit
+protocol sendRequestDelegate : class  {
+    func sendrequest(cell : LawyerData)
+    
+}
 
 class LawyerData: UITableViewCell {
     
@@ -16,8 +20,17 @@ class LawyerData: UITableViewCell {
     
     @IBOutlet weak var city: UILabel!
     @IBOutlet weak var spec: UILabel!
+    weak var delegate : sendRequestDelegate!
     
 
+    
+    
+    @IBAction func sendRequest(_ sender: Any) {
+        if let del = self.delegate{
+              del.sendrequest(cell: self)
+        }
+    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

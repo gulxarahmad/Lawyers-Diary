@@ -51,9 +51,24 @@ class Utilities {
         return passwordTest.evaluate(with: password)
     }
     static func isValidEmail(_ email:String)-> Bool {
-        let validemail = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let validemail = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
         let testEmail = NSPredicate(format:"SELF MATCHES %@", validemail)
         return testEmail.evaluate(with: email)
      }
-    
+    static func isValidPhone (_ number:String)-> Bool {
+        do{
+            let detector = try NSDataDetector( types:
+                NSTextCheckingResult.CheckingType.phoneNumber.rawValue)
+            let matches = detector.matches(in: number, options: [], range: NSMakeRange(0, number.count))
+            if let res = matches.first{
+                return res.resultType == .phoneNumber && res.range.location == 0 && res.range.length == number.count && number.count == 10
+            }
+            else{
+                return false
+            }
+        } catch {
+            return false
+        }
+    }
 }
+    
