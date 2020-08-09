@@ -231,8 +231,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="final logo 2.png" translatesAutoresizingMaskIntoConstraints="NO" id="JTV-zp-kHX">
-                                <rect key="frame" x="62" y="148" width="283" height="319"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="final logo 2.png" translatesAutoresizingMaskIntoConstraints="NO" id="JTV-zp-kHX">
+                                <rect key="frame" x="62" y="148" width="283" height="275"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="319" id="yVN-JW-utn"/>
                                 </constraints>
@@ -1992,6 +1992,13 @@
                                 <rect key="frame" x="-28" y="80" width="146" height="117"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LAWYERS DIARY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bv-r0-UxE">
+                                <rect key="frame" x="12" y="166" width="106" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bej-4g-o9a">
                                 <rect key="frame" x="21" y="213" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2032,16 +2039,13 @@
                                     <segue destination="pYu-QG-gtY" kind="show" id="HiQ-U0-RF5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LAWYERS DIARY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bv-r0-UxE">
-                                <rect key="frame" x="12" y="166" width="106" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view tag="-1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUM-ar-vt7">
                                 <rect key="frame" x="0.0" y="88" width="414" height="793"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hammer.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xyI-of-7OB">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="793"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bro-rI-z2W">
                                         <rect key="frame" x="18" y="201" width="171" height="148"/>
                                         <subviews>
@@ -3872,8 +3876,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="final logo 2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yw3-1r-Ev9">
-                                        <rect key="frame" x="52" y="65" width="321" height="271"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="final logo 2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yw3-1r-Ev9">
+                                        <rect key="frame" x="30" y="65" width="343" height="229"/>
                                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="271" id="Hos-g0-sKi"/>
@@ -5715,6 +5719,7 @@
         <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="final logo 2.png" width="453.60000610351562" height="340.07998657226562"/>
         <image name="firstpage.jpg" width="2512" height="1670"/>
+        <image name="hammer.jpg" width="1021.9199829101562" height="900"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="lock.fill" catalog="system" width="128" height="128"/>
         <image name="lock.slash.fill" catalog="system" width="118" height="128"/>
