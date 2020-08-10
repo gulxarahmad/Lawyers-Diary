@@ -74,6 +74,9 @@
 		1873CB6224D4170C00DC70E0 /* ReceiverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873CB6124D4170C00DC70E0 /* ReceiverTableViewCell.swift */; };
 		9283CB4324DDE4F700C1B854 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9283CB4224DDE4F700C1B854 /* logo.png */; };
 		92BB81F424D98DE700F9C4E9 /* firstpage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92BB81F324D98DE700F9C4E9 /* firstpage.jpg */; };
+		92DE679D24DF698F00DE0B50 /* project logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 92DE679C24DF698F00DE0B50 /* project logo.png */; };
+		92DE67A124DF6D4400DE0B50 /* final logo 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 92DE67A024DF6D4300DE0B50 /* final logo 2.png */; };
+		92DE67A324DFFA9600DE0B50 /* hammer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92DE67A224DFFA9500DE0B50 /* hammer.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -145,6 +148,9 @@
 		1873CB6124D4170C00DC70E0 /* ReceiverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverTableViewCell.swift; sourceTree = "<group>"; };
 		9283CB4224DDE4F700C1B854 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		92BB81F324D98DE700F9C4E9 /* firstpage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = firstpage.jpg; sourceTree = "<group>"; };
+		92DE679C24DF698F00DE0B50 /* project logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "project logo.png"; sourceTree = "<group>"; };
+		92DE67A024DF6D4300DE0B50 /* final logo 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "final logo 2.png"; sourceTree = "<group>"; };
+		92DE67A224DFFA9500DE0B50 /* hammer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hammer.jpg; sourceTree = "<group>"; };
 		E6F78825309B7B3D3EC44135 /* Pods-lawyers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lawyers.debug.xcconfig"; path = "Target Support Files/Pods-lawyers/Pods-lawyers.debug.xcconfig"; sourceTree = "<group>"; };
 		ED36E0D75D7AFF936C05C279 /* Pods-lawyers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lawyers.release.xcconfig"; path = "Target Support Files/Pods-lawyers/Pods-lawyers.release.xcconfig"; sourceTree = "<group>"; };
 		F1C86BB4BA1A923D86165514 /* Pods_lawyers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lawyers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +196,7 @@
 				097BD8B32407A6170094AAC1 /* View Controllers */,
 				09BC944C245CC0B100ECA565 /* Client View Controller */,
 				097BD89223FF18D60094AAC1 /* Assets.xcassets */,
+				92DE67A024DF6D4300DE0B50 /* final logo 2.png */,
 				097BD89423FF18D60094AAC1 /* LaunchScreen.storyboard */,
 				097BD8AB2401502B0094AAC1 /* GoogleService-Info.plist */,
 				097BD89723FF18D60094AAC1 /* Info.plist */,
@@ -297,8 +304,10 @@
 		92BB81F224D98DB100F9C4E9 /* RizAssets */ = {
 			isa = PBXGroup;
 			children = (
+				92DE679C24DF698F00DE0B50 /* project logo.png */,
 				92BB81F324D98DE700F9C4E9 /* firstpage.jpg */,
 				9283CB4224DDE4F700C1B854 /* logo.png */,
+				92DE67A224DFFA9500DE0B50 /* hammer.jpg */,
 			);
 			path = RizAssets;
 			sourceTree = "<group>";
@@ -363,9 +372,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92DE67A124DF6D4400DE0B50 /* final logo 2.png in Resources */,
 				92BB81F424D98DE700F9C4E9 /* firstpage.jpg in Resources */,
+				92DE67A324DFFA9600DE0B50 /* hammer.jpg in Resources */,
 				097BD89623FF18D60094AAC1 /* LaunchScreen.storyboard in Resources */,
 				9283CB4324DDE4F700C1B854 /* logo.png in Resources */,
+				92DE679D24DF698F00DE0B50 /* project logo.png in Resources */,
 				097BD8AC2401502B0094AAC1 /* GoogleService-Info.plist in Resources */,
 				097BD89323FF18D60094AAC1 /* Assets.xcassets in Resources */,
 				097BD89123FF18CF0094AAC1 /* Main.storyboard in Resources */,
