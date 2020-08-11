@@ -1,11 +1,3 @@
-//
-//  FindLawyer.swift
-//  lawyers
-//
-//  Created by hst on 02/05/2020.
-//  Copyright © 2020 hst. All rights reserved.
-//
-
 import UIKit
 import Firebase
 
@@ -55,9 +47,10 @@ class FindLawyer: UIViewController, UITableViewDataSource, UITableViewDelegate {
                         let lname = maindata["lastname"] as? String
                        let spec = maindata["Specialization"] as? String
                         let city = maindata["City"] as? String
+                        let lawyerid = maindata["ID"] as? String
                         
                         if spec == type && city == cities{
-                       self.searchdata.append(FindLawyerModel(fname: fname!, lname: lname!, spec: spec!, city:city!))
+                            self.searchdata.append(FindLawyerModel(fname: fname!, lname: lname!, spec: spec!, city:city!, lawyerid:lawyerid!))
                        
                        print(fname!)
                        print(spec!)
@@ -146,10 +139,12 @@ class FindLawyer: UIViewController, UITableViewDataSource, UITableViewDelegate {
                     data.lname?.text = details.lname
                     data.spec?.text = details.spec
                     data.city?.text = details.city
+                    data.delegate = self
                     return data
               default:
                 print("Something Wrong")
         }
+                
                 return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -191,4 +186,13 @@ class FindLawyer: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     }
     
+}
+
+extension FindLawyer:sendRequestDelegate{
+    func sendrequest(cell: LawyerData) {
+        let indexPath = self.LawyerDataTable.indexPath(for: cell)
+        let request = self.storyboard?.instantiateViewController(withIdentifier: "ClientPostRequest") as! PostRequest
+            request.lawyerid = searchdata[indexPath!.row].lawyerid
+                self.navigationController?.pushViewController(request, animated: true)
+    }
 }

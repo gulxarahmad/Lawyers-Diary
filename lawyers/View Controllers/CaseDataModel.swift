@@ -10,13 +10,27 @@ import UIKit
 import Foundation
 class CaseDataModel{
     var cname: String?
+    var clientname: String?
+    var cid: String?
     var courtname: String?
     var casetype: String?
-    var mobile: String?
-    init (cname: String, courtname: String, casetype: String, mobile: String){
+    var date: String?
+    var details:String?
+    var source:String?
+    var skey:String?
+    var clientid: String?
+    var postkey: String?
+    init (cid: String, cname: String, courtname: String, casetype: String, date: String, det: String,source:String, clientname: String,skey:String, clientid: String, postkey: String){
         self.cname = cname
+        self.cid = cid
         self.courtname = courtname
         self.casetype = casetype
-        self.mobile = mobile
+        self.date = date
+        self.details = det
+        self.clientname = clientname
+        self.skey = skey
+        self.source = source
+        self.clientid = clientid
+        self.postkey = postkey
     }
 }
