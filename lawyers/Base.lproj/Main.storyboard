@@ -5607,13 +5607,12 @@
         </scene>
     </scenes>
 
-<<<<<<< HEAD
-=======
+
     <inferredMetricsTieBreakers>
         <segue reference="86t-CC-ArP"/>
     </inferredMetricsTieBreakers>
 
->>>>>>> master
+
     <resources>
         <image name="19608" width="6048" height="4024"/>
         <image name="Find Lawyer" width="1890" height="1417"/>
@@ -5621,13 +5620,12 @@
         <image name="cases requests3" width="1890" height="1417"/>
         <image name="client cases" width="1890" height="1417"/>
 
-<<<<<<< HEAD
-=======
+
         <image name="complete request" width="1890" height="1417"/>
         <image name="current requests" width="1890" height="1417"/>
         <image name="envelope.fill" catalog="system" width="128" height="93"/>
 
->>>>>>> master
+
         <image name="final logo 2.png" width="453.60000610351562" height="340.07998657226562"/>
         <image name="firstpage.jpg" width="2512" height="1670"/>
         <image name="hammer.jpg" width="1021.9199829101562" height="900"/>
@@ -5639,8 +5637,7 @@
         <image name="my cases" width="1890" height="1417"/>
         <image name="my diary2" width="1890" height="1417"/>
 
-<<<<<<< HEAD
-=======
+
         <image name="paperplane.fill" catalog="system" width="128" height="121"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.crop.circle.badge.plus" catalog="system" width="128" height="101"/>
@@ -5648,7 +5645,7 @@
         <image name="phone.circle.fill" catalog="system" width="128" height="121"/>
         <image name="post case request" width="1890" height="1417"/>
 
->>>>>>> master
+
         <image name="project logo.png" width="453.60000610351562" height="340.07998657226562"/>
         <image name="reminder2" width="1890" height="1417"/>
     </resources>
