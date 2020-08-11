@@ -92,6 +92,15 @@ class PostRequest: UIViewController, UITableViewDataSource, UITableViewDelegate 
                                (error) in self.showmessage(error.localizedDescription)
                            }
                        }
+        
+        caseTitle.text = ""
+        caseTitle.placeholder = "Enter Case Title"
+        caseDetail.text = ""
+        caseDetail.placeholder = "Case Details"
+        courtName.text = ""
+        courtName.placeholder = "Court Name"
+        typeBtn.setTitle("Case Type", for: .normal)
+        
     }
     
     func showmessage(_ errmessage:String)

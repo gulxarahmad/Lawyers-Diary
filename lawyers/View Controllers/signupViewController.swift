@@ -71,7 +71,6 @@ class signupViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         gendertbl.isHidden=true
         citytbl.isHidden=true
-        profilepic.isHidden=true
         specialtbl.isHidden = true
         exptbl.isHidden=true
         // Do any additional setup after loading the view.

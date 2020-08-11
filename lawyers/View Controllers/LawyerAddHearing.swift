@@ -38,6 +38,8 @@ class LawyerAddHearing: UIViewController {
     
     @IBAction func submit(_ sender: Any) {
         savedata()
+        agenda.text = ""
+        agenda.placeholder = "Type Your Agenda"
     }
     
     func savedata()

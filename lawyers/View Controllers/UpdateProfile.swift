@@ -49,6 +49,11 @@ class UpdateProfile: UIViewController, UITableViewDelegate, UITableViewDataSourc
     var getid: String!
 
     override func viewDidLoad() {
+        gendertbl.isHidden=true
+        citytbl.isHidden=true
+        specialtbl.isHidden = true
+        exptbl.isHidden=true
+
        
     firstname.text = setfname
         lastname.text = setlname

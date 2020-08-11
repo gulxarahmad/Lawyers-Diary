@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var login: UIButton!
     
+    var firstname: String!
     //@IBOutlet weak var error: UILabel!
     
     override func viewDidLoad() {
@@ -68,17 +69,19 @@ func validatefields() -> String? {
                     else
                     {
                         let ref: DatabaseReference!
-                       var fname: String!
+                       
                         ref = Database.database().reference()
                         let userID = Auth.auth().currentUser?.uid
                         ref.child("Lawyer").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
                           // Get user value
                           let value = snapshot.value as? NSDictionary
                          let usertype = value?["User Type"] as? String ?? ""
+                            self.firstname = value?["lastname"] as? String ?? ""
+                           // print(self.firstname)
                            
                           //  print(emails)
                             if usertype == "Lawyer"{
-                               self.transitiontoHome(userID!)
+                                self.transitiontoHome()
                             }
                             else
                             {
@@ -116,10 +119,12 @@ func validatefields() -> String? {
      //   error.text=errmessage
       //  error.alpha=1
     }
-    func transitiontoHome( _ userid:String)
+    func transitiontoHome()
     {
   let home = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! LawyerHome
-          self.navigationController?.pushViewController(home, animated: true)
+     //   home.fname = self.firstname
+        self.navigationController?.pushViewController(home, animated: true)
+        
 
         
     }

@@ -34,6 +34,10 @@ class ClientUpdateProfile: UIViewController, UITableViewDelegate, UITableViewDat
               lastname.text = setlname
               email.text = setemail
               mobile.text = setmobile
+            
+            
+        citytbl.isHidden = true
+            gendertbl.isHidden = true
               genderbtn.setTitle(gend, for: .normal)
               citybtn.setTitle(cit, for: .normal)
 

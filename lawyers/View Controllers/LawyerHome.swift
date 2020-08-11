@@ -11,7 +11,7 @@ import Firebase
 
 class LawyerHome: UIViewController {
     
-    
+    @IBOutlet weak var lawyername: UILabel!
     @IBOutlet weak var leading: NSLayoutConstraint!
     
     @IBOutlet weak var trailing: NSLayoutConstraint!
@@ -19,13 +19,28 @@ class LawyerHome: UIViewController {
     var MenuOut = false
     
     
+    var fname: String!
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-      //  navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        let ref: DatabaseReference!
+                              
+                               ref = Database.database().reference()
+                               let userID = Auth.auth().currentUser?.uid
+                               ref.child("Lawyer").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+                                 // Get user value
+                                 let value = snapshot.value as? NSDictionary
+                                self.fname = value?["firstname"] as? String ?? ""
+                                self.lawyername.text = self.fname
+   
+
+                                 })
+                               
+     
         
-        // Do any additional setup after loading the view.
+        super.viewDidLoad()
+
     }
+
     
 
     /*

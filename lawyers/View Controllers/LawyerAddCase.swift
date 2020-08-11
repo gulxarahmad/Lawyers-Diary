@@ -103,6 +103,16 @@ class LawyerAddCase: UIViewController, UITableViewDelegate, UITableViewDataSourc
                         (error) in self.showmessage(error.localizedDescription)
                     }
                 }
+        
+        cname.text = ""
+        cname.placeholder = "Enter Case Title"
+        details.text = ""
+        details.placeholder = "Enter Details"
+        courname.text = ""
+        courname.placeholder = "Court Name"
+        number.text = ""
+        number.placeholder = "Client Name"
+        typebtn.setTitle("Case Type", for: .normal)
 }
 
     func showmessage(_ errmessage:String)

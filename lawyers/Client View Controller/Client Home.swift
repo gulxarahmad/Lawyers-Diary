@@ -17,9 +17,26 @@ class Client_Home: UIViewController {
     
     @IBOutlet weak var trailing: NSLayoutConstraint!
     
+    @IBOutlet weak var clientname: UILabel!
+    
     var MenuOut = false
+    var fname:String!
     
     override func viewDidLoad() {
+        let ref: DatabaseReference!
+                                     
+                                      ref = Database.database().reference()
+                                      let userID = Auth.auth().currentUser?.uid
+                                      ref.child("Client").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+                                        // Get user value
+                                        let value = snapshot.value as? NSDictionary
+                                       self.fname = value?["firstname"] as? String ?? ""
+                                       print(self.fname)
+                                       self.clientname.text = self.fname
+          
+
+                                        })
+                                      
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
