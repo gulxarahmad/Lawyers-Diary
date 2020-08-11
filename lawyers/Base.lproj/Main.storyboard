@@ -1115,7 +1115,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="797"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="19608" translatesAutoresizingMaskIntoConstraints="NO" id="2tm-Y9-vix">
-                                        <rect key="frame" x="0.0" y="-16" width="414" height="846.00000000000091"/>
+                                        <rect key="frame" x="0.0" y="-16" width="414" height="846"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yjc-fc-5G8" userLabel="Find Lawyer Button">
                                         <rect key="frame" x="23" y="262" width="170" height="180"/>
